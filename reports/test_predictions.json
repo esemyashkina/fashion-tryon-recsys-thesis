@@ -1,0 +1,1596 @@
+{
+  "model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "k": 6,
+  "prompts": {
+    "finished_looks": "Choose the numbered product that would make the best complete look for the person in the first photo.\n\nMentally remove the garment being replaced. Keep the same visible clothing that remains, shoes, accessories, hair and makeup in every alternative. Treat the removed garment only as a pointer to the replacement slot. Use the requested filters as context; all products already passed them.\n\nPicture the finished outfit with each product in turn. Look for the strongest visual connection: for example, a detail picked up by an accessory, a silhouette balanced by the remaining layers, or an intentional contrast in color, pattern or texture. Prefer the complete outfit with the clearest visual idea. Bold, contrasting and understated looks can all work. When visible context is sparse, make the modest comparison the photo supports.\n\nCompare every numbered product. Return JSON with integer choice and reason. State the concrete candidate feature and retained element that decide the comparison.\nCompare every numbered product. Return JSON with integer choice and reason."
+  },
+  "rankings": {
+    "FC003": {
+      "query": {
+        "query": "Casual blue jeans in medium-wash denim, relaxed straight-leg fit, full length with rolled cuffs and minimal detailing",
+        "reason": "The relaxed cut and rolled cuffs complement the colorful patterned shirt, embroidered vest, scarf, and brown lace-up boots without competing with them."
+      },
+      "photo_ranking": [
+        "test:manual:b3",
+        "test:manual:b6",
+        "test:manual:b5",
+        "test:manual:b4"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b6",
+        "test:manual:b3",
+        "test:manual:b5",
+        "test:manual:b4"
+      ]
+    },
+    "FC002": {
+      "query": {
+        "query": "Blue casual jeans in medium-wash denim, straight-leg fit, full length, classic five-pocket construction and minimal distressing",
+        "reason": "The sturdy denim and relaxed straight leg complement the brown work jacket, gray T-shirt and rugged boots."
+      },
+      "photo_ranking": [
+        "test:manual:b3",
+        "test:manual:b6",
+        "test:manual:b5",
+        "test:manual:b4"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b6",
+        "test:manual:b3",
+        "test:manual:b5",
+        "test:manual:b4"
+      ]
+    },
+    "FC010": {
+      "query": {
+        "query": "Olive green casual shorts in cotton twill, straight leg, knee-length, flat front, belt loops and side pockets",
+        "reason": "The clean twill and straight silhouette balance the plush navy top and patterned scarf, while the olive color complements the burgundy loafers."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_009:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B"
+      ]
+    },
+    "FC006": {
+      "query": {
+        "query": "Black formal trousers, tailored straight-leg fit, full length, flat front, pressed creases, belt loops, smooth suiting fabric",
+        "reason": "The clean tailoring complements the pinstripe blazer, while the straight legs and full length pair neatly with the black lace-up shoes and simple white crew-neck top."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_001:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_001:B"
+      ]
+    },
+    "FC017": {
+      "query": {
+        "query": "Expressive navy jumpsuit with short sleeves, front zipper, cinched waist, full-length wide legs, and contrasting white piping",
+        "reason": "The sporty silhouette complements the black sneakers and relaxed waves, while white piping echoes the black-and-white keytar."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B"
+      ]
+    },
+    "FC015": {
+      "query": {
+        "query": "Coral casual sweater, fine-gauge smooth knit, crew neck, long sleeves, solid color, neat regular fit and hip-length hem",
+        "reason": "Replacing the gray top, a streamlined knit layers comfortably under the navy blazer and complements the cream trousers and navy loafers."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B"
+      ]
+    },
+    "FC011": {
+      "query": {
+        "query": "Cream casual T-shirt in soft cotton jersey, relaxed fit, crew neckline, short sleeves, hip-length hem, solid finish",
+        "reason": "The relaxed shape complements the straight-leg navy trousers and white sneakers, while cream ties in with the cherry-print tote."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_010:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_010:B"
+      ]
+    },
+    "FC013": {
+      "query": {
+        "query": "Expressive teal waistcoat in floral jacquard, tailored fit, deep V-neck, single-breasted button front, welt pockets and pointed hem",
+        "reason": "The tailored cut and refined texture complement the retained ivory shirt, charcoal trousers and polished black dress shoes."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261114_222049_865871:batch_017:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261114_222049_865871:batch_017:B"
+      ]
+    },
+    "FC012": {
+      "query": {
+        "query": "Cream casual T-shirt in soft cotton jersey, with a crew neckline, short sleeves, relaxed straight fit and hip-length hem",
+        "reason": "The simple silhouette complements the gathered navy midi skirt, while the cream tone ties in with the canvas tote and white slip-on shoes."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_010:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_010:B"
+      ]
+    },
+    "FC001": {
+      "query": {
+        "query": "Expressive white high-waisted mini skirt with a gently flared silhouette, layered lace panels and a scalloped hem",
+        "reason": "The lace echoes the camisole beneath the fitted pink cardigan, while the flared mini silhouette complements the delicate jewelry and strappy metallic heels."
+      },
+      "photo_ranking": [
+        "test:manual:b2",
+        "test:manual:b1"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b2",
+        "test:manual:b1"
+      ]
+    },
+    "FC018": {
+      "query": {
+        "query": "Expressive navy jumpsuit with cobalt blue color-block panels, short sleeves, cinched waist, tapered ankle-length legs and lightweight stretch fabric",
+        "reason": "Cobalt accents echo the snorkel mask and fins, while tapered legs keep the fins visible and the relaxed cut suits the sporty accessories."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B"
+      ]
+    },
+    "FC007": {
+      "query": {
+        "query": "Casual forest green polo shirt, breathable piqué cotton, short sleeves, relaxed straight fit, classic collar, button placket, hip-length hem",
+        "reason": "The sporty white shorts, striped socks, white sneakers, and headband pair naturally with a simple, breathable polo in a relaxed athletic silhouette."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261114_222049_865871:batch_007:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261114_222049_865871:batch_007:B"
+      ]
+    },
+    "FC005": {
+      "query": {
+        "query": "Black formal trousers, tailored straight-leg fit, flat front, full length, smooth suiting fabric, discreet waistband and minimal detailing",
+        "reason": "The clean tailoring complements the windowpane blazer, while the understated fabric balances its pattern and suits the white crew-neck top and black lace-up shoes."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_001:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_001:B"
+      ]
+    },
+    "FC014": {
+      "query": {
+        "query": "Expressive teal waistcoat with floral embroidery, a V-neck, button front, tailored waist, and cropped hem",
+        "reason": "Floral embroidery complements the ivory blouse and mustard gathered skirt, while the cropped, tailored shape balances the skirt’s fullness and relaxed tan sandals."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261114_222049_865871:batch_017:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261114_222049_865871:batch_017:B"
+      ]
+    },
+    "FC009": {
+      "query": {
+        "query": "Casual olive green Bermuda shorts in linen-cotton, with a relaxed straight leg, mid-rise waistband, belt loops and front pockets",
+        "reason": "The relaxed fabric and simple construction complement the cream rolled-sleeve blouse, woven sandals and botanical-print tote."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B"
+      ]
+    },
+    "FC019": {
+      "query": {
+        "query": "Burgundy casual sweatshirt with a relaxed fit, crew neckline, long sleeves, ribbed cuffs and hem, and a plain hip-length body",
+        "reason": "The simple silhouette complements the black flared skirt, tights, ankle boots, and pointed hat without competing with the overall look."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ]
+    },
+    "FC016": {
+      "query": {
+        "query": "Casual coral sweater in lightweight knit, with a crew neckline, elbow-length sleeves, relaxed straight fit and hip-length hem",
+        "reason": "The lightweight, straight silhouette layers comfortably under the retained cream vest. Coral adds warmth alongside the navy skirt, tan sandals and brown cuffs."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261114_222049_865871:batch_028:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B"
+      ]
+    },
+    "FC020": {
+      "query": {
+        "query": "Casual burgundy sweatshirt, relaxed fit, crew neck, hip-length hem, long sleeves, soft fleece, ribbed cuffs and waistband, solid color",
+        "reason": "The relaxed shape complements the red trousers and black boots, while solid burgundy creates a festive tonal look with the Santa hat."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ]
+    },
+    "FC004": {
+      "query": {
+        "query": "Red expressive dress with a fitted waist, flared above-knee skirt, voluminous sleeves, square neckline, and satin finish",
+        "reason": "The polished updo, sheer tights, and burgundy ankle-strap pumps complement a romantic, structured silhouette with a dressy finish."
+      },
+      "photo_ranking": [
+        "test:manual:o3",
+        "test:manual:o9"
+      ],
+      "filter_text_ranking": [
+        "test:manual:o3",
+        "test:manual:o9"
+      ]
+    },
+    "FC021": {
+      "query": {
+        "query": "Forest green casual sweatshirt with crew neckline, relaxed fit, hip-length cut, long sleeves, ribbed cuffs and hem, soft cotton fleece",
+        "reason": "The clean, comfortable silhouette complements the beige riding breeches, tall brown boots, black helmet, and equestrian styling."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "FC026": {
+      "query": {
+        "query": "Expressive purple blouse in lightweight textured fabric, relaxed fit, gathered neckline, softly billowed sleeves, and delicate embroidered detailing",
+        "reason": "The soft sleeves and embroidery complement the flowing rust skirt and cream crocheted belt, while the relaxed shape suits the casual sandals and loose updo."
+      },
+      "photo_ranking": [
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A"
+      ]
+    },
+    "FC023": {
+      "query": {
+        "query": "Blue casual shirt in soft cotton, relaxed fit, short sleeves, classic collar, button front, solid color and hip-length hem",
+        "reason": "The simple shape and soft fabric complement the light-blue flared midi skirt, cream flats and understated hairstyle."
+      },
+      "photo_ranking": [
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261115_123348_479882:batch_003:A"
+      ]
+    },
+    "FC025": {
+      "query": {
+        "query": "Expressive purple satin blouse with a draped V-neck, voluminous long sleeves, fitted cuffs, and waist-length silhouette",
+        "reason": "The lustrous fabric and dramatic sleeves complement the silver sequin flared trousers, while the waist-length cut balances their long silhouette and black platform shoes."
+      },
+      "photo_ranking": [
+        "test:20261115_123348_479882:batch_005:A",
+        "test:20261115_123348_479882:batch_005:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A"
+      ]
+    },
+    "FC024": {
+      "query": {
+        "query": "Blue casual shirt with a relaxed fit, short sleeves, pointed collar, button front, and hip-length hem in lightweight cotton",
+        "reason": "The relaxed, simple shape complements the navy A-line midi skirt, while the clean collar and cotton fabric suit the cream pumps and softly styled hair."
+      },
+      "photo_ranking": [
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261115_123348_479882:batch_003:A"
+      ]
+    },
+    "FC022": {
+      "query": {
+        "query": "Forest green casual sweatshirt, solid cotton fleece, regular fit, crew neck, long sleeves, ribbed cuffs and hem, minimal detailing",
+        "reason": "The clean, understated sweatshirt balances the black leather motorcycle pants and tall boots, while forest green complements the dark outfit."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF004": {
+      "query": {
+        "query": "Bohemian olive green cotton twill trousers, relaxed straight-leg fit, mid-rise waist, full length with subtly rolled cuffs",
+        "reason": "The understated fabric and earthy color balance the floral shirt, embroidered vest, and patterned scarf, while the relaxed cut complements the brown boots."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b3",
+        "test:manual:b5",
+        "test:manual:b4",
+        "test:manual:b6",
+        "test:manual:b1",
+        "test:manual:b2"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b1",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:manual:b2",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b4",
+        "test:manual:b5",
+        "test:manual:b3",
+        "test:manual:b6"
+      ]
+    },
+    "TRF010": {
+      "query": {
+        "query": "Forest green casual polo top, short sleeves, cotton piqué, classic collar, two-button placket, straight fit, hip length, solid color",
+        "reason": "The sporty polo design complements the white shorts, sneakers, headband, and green-striped socks for a cohesive tennis-inspired look."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_016:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF012": {
+      "query": {
+        "query": "Men's casual forest-green T-shirt, short sleeves, crew neckline, relaxed straight fit, lightweight cotton jersey, solid color, hip-length hem",
+        "reason": "The green echoes the striped socks, while the simple cotton tee complements the white shorts, sneakers, and headband for a relaxed athletic look."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261115_015259_003828:batch_013:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF005": {
+      "query": {
+        "query": "Chocolate brown feminine high-waisted A-line mini skirt in smooth woven fabric, with a clean waistband and subtle front pleats",
+        "reason": "Replacing the existing skirt, the warm brown complements the dusty-rose cardigan and metallic strappy heels, while the clean, feminine shape suits the lace neckline and delicate jewelry."
+      },
+      "photo_ranking": [
+        "test:manual:b1",
+        "test:manual:b2",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b4",
+        "test:manual:b5",
+        "test:manual:b3",
+        "test:manual:b6"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b1",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:manual:b2",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b4",
+        "test:manual:b5",
+        "test:manual:b3",
+        "test:manual:b6"
+      ]
+    },
+    "TRF008": {
+      "query": {
+        "query": "Black smart-casual tailored trousers, mid-rise, flat-front, straight-leg, full-length, smooth woven fabric with a clean hem",
+        "reason": "The clean tailoring complements the black windowpane blazer, while the understated fabric balances the white crew-neck T-shirt and polished black shoes."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b3",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:manual:b5",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b6",
+        "test:manual:b4",
+        "test:manual:b1",
+        "test:manual:b2"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b1",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:manual:b2",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b4",
+        "test:manual:b5",
+        "test:manual:b3",
+        "test:manual:b6"
+      ]
+    },
+    "TRF021": {
+      "query": {
+        "query": "Cream tailored straight-leg trousers in structured cotton twill, with a mid-rise waist, flat front, and ankle-length hems",
+        "reason": "Replacing the olive shorts, the cream trousers echo the scarf’s light accents and complement the navy top and burgundy loafers."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:manual:b3",
+        "test:manual:b1",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b5",
+        "test:manual:b6",
+        "test:manual:b4",
+        "test:manual:b2"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b1",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:manual:b2",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b4",
+        "test:manual:b5",
+        "test:manual:b3",
+        "test:manual:b6"
+      ]
+    },
+    "TRF016": {
+      "query": {
+        "query": "Casual light blue cotton knit top with a crew neckline, short sleeves, relaxed fit, and hip-length hem for easy tucking",
+        "reason": "The soft blue complements the cream wide-leg trousers, while the simple tucked silhouette and clean neckline suit the brown Mary Janes and softly styled hair."
+      },
+      "photo_ranking": [
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF006": {
+      "query": {
+        "query": "Expressive burgundy mini dress with fitted velvet bodice, dramatic puff sleeves, defined waist and flared satin skirt",
+        "reason": "Burgundy echoes the ankle-strap heels, while the sculpted silhouette and dramatic sleeves complement the sheer tights and elegant updo."
+      },
+      "photo_ranking": [
+        "test:manual:o9",
+        "test:manual:o3",
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B"
+      ],
+      "filter_text_ranking": [
+        "test:manual:o3",
+        "test:manual:o9",
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B"
+      ]
+    },
+    "TRF018": {
+      "query": {
+        "query": "Casual warm tan linen-blend shorts with a relaxed straight-leg fit, knee-length hem, flat front, belt loops and side pockets",
+        "reason": "The relaxed linen-blend silhouette complements the cream rolled-sleeve blouse, while warm tan works with the botanical tote and woven sandals."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:manual:b3",
+        "test:manual:b4",
+        "test:manual:b6",
+        "test:manual:b5"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b3",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b6",
+        "test:manual:b5",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:manual:b4"
+      ]
+    },
+    "TRF014": {
+      "query": {
+        "query": "Forest green casual top, soft cotton jersey, short sleeves, crew neckline, relaxed fit, hip length, solid color",
+        "reason": "The simple, tuckable silhouette complements the high-waisted cream trousers, while the soft fabric suits the relaxed styling of the brown Mary Janes and white socks."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261114_222049_865871:batch_007:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF003": {
+      "query": {
+        "query": "Casual olive green cotton twill trousers, relaxed straight-leg fit, mid-rise waist, simple flat front, and lightly rolled ankle cuffs.",
+        "reason": "The muted olive and simple construction balance the vibrant floral shirt, embroidered vest, and colorful scarf. Rolled cuffs complement the brown lace-up boots."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b3",
+        "test:manual:b6",
+        "test:manual:b5",
+        "test:manual:b4"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b3",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b6",
+        "test:manual:b5",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:manual:b4"
+      ]
+    },
+    "TRF022": {
+      "query": {
+        "query": "Casual burgundy cotton jersey top with a relaxed fit, crew neckline, short sleeves, and hip-length hem",
+        "reason": "Burgundy picks up the cherry print on the cream tote, while the relaxed silhouette complements the navy trousers and white sneakers."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_123348_479882:batch_003:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF002": {
+      "query": {
+        "query": "Dark indigo workwear jeans, relaxed straight-leg fit, full length, sturdy washed denim, classic five-pocket construction, subtle contrast stitching",
+        "reason": "The durable denim and relaxed silhouette complement the brown work jacket, gray T-shirt, and rugged brown boots."
+      },
+      "photo_ranking": [
+        "test:manual:b3",
+        "test:manual:b6",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:manual:b5",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b4",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b1",
+        "test:manual:b2"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b1",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:manual:b2",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b4",
+        "test:manual:b5",
+        "test:manual:b3",
+        "test:manual:b6"
+      ]
+    },
+    "TRF017": {
+      "query": {
+        "query": "Pale blue classic cotton blouse with a softly structured collar, short sleeves, button front, relaxed fit, and tuckable hip-length hem",
+        "reason": "The tuckable blouse balances the high-waisted, wide-leg cream trousers, while its classic details complement the brown Mary Janes, white socks, and neat updo."
+      },
+      "photo_ranking": [
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_013:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261115_123348_479882:batch_005:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_013:A"
+      ]
+    },
+    "TRF001": {
+      "query": {
+        "query": "Casual olive green canvas pants, straight-leg fit, full length, mid-rise waist, simple front pockets and subtle workwear-inspired stitching",
+        "reason": "The sturdy canvas and relaxed cut complement the brown workwear jacket and boots, while olive pairs easily with the gray T-shirt."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b3",
+        "test:manual:b5",
+        "test:manual:b4",
+        "test:manual:b6"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b3",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b6",
+        "test:manual:b5",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:manual:b4"
+      ]
+    },
+    "TRF019": {
+      "query": {
+        "query": "Warm beige casual linen-blend trousers, high-rise, relaxed straight leg, ankle length, flat front and subtle side pockets",
+        "reason": "The airy fabric and relaxed cut complement the cream blouse and tan sandals, while warm beige pairs with the botanical-print tote."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_001:A",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b1",
+        "test:manual:b3",
+        "test:manual:b4",
+        "test:manual:b5",
+        "test:manual:b6",
+        "test:manual:b2"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b1",
+        "test:20261114_222049_865871:batch_001:A",
+        "test:manual:b2",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_001:B",
+        "test:manual:b4",
+        "test:manual:b5",
+        "test:manual:b3",
+        "test:manual:b6"
+      ]
+    },
+    "TRF020": {
+      "query": {
+        "query": "Casual stone beige cotton twill chino pants, mid-rise, straight legs, ankle length, belt loops, tailored waistband and slant pockets",
+        "reason": "The light neutral twill complements the navy top and patterned scarf, while the clean ankle-length cut pairs neatly with the burgundy loafers."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_009:B",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b3",
+        "test:manual:b5",
+        "test:manual:b6",
+        "test:manual:b4"
+      ],
+      "filter_text_ranking": [
+        "test:manual:b3",
+        "test:20261114_222049_865871:batch_009:A",
+        "test:manual:b6",
+        "test:manual:b5",
+        "test:20261114_222049_865871:batch_009:B",
+        "test:manual:b4"
+      ]
+    },
+    "TRF026": {
+      "query": {
+        "query": "Expressive ivory dress shirt with tonal paisley jacquard, pointed collar, tailored fit, long sleeves, button front and buttoned cuffs",
+        "reason": "Replacing the shirt, the subtle pattern adds interest beneath the retained teal waistcoat, while the tailored details suit the charcoal trousers and black dress shoes."
+      },
+      "photo_ranking": [
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261114_222049_865871:batch_017:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A"
+      ]
+    },
+    "TRF034": {
+      "query": {
+        "query": "Expressive black and white color-block jumpsuit with short sleeves, crew neckline, defined waist and relaxed straight-leg trousers",
+        "reason": "The bold monochrome design echoes the black sneakers and white keytar, while the relaxed silhouette complements the casual styling and long, wavy hair."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B",
+        "test:manual:o3",
+        "test:manual:o9"
+      ],
+      "filter_text_ranking": [
+        "test:manual:o3",
+        "test:manual:o9",
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B"
+      ]
+    },
+    "TRF035": {
+      "query": {
+        "query": "Charcoal gray casual jumpsuit with a crew neckline, short sleeves, defined waist, and relaxed full-length straight legs in matte jersey",
+        "reason": "The relaxed cut and matte fabric complement the retained black sneakers, while the simple neckline works with her long, softly waved hair."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B",
+        "test:manual:o3",
+        "test:manual:o9"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_008:B",
+        "test:manual:o3",
+        "test:20261115_015259_003828:batch_008:A",
+        "test:manual:o9"
+      ]
+    },
+    "TRF024": {
+      "query": {
+        "query": "Casual cream cotton top with a relaxed fit, short sleeves, crew neckline, and hip-length hem",
+        "reason": "The simple shape balances the flowing navy midi skirt, while cream complements the canvas tote and white slip-on shoes."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF036": {
+      "query": {
+        "query": "Expressive cobalt blue jumpsuit with a bold wave print, orange accents, short sleeves, cinched waist and relaxed tapered legs",
+        "reason": "The blue echoes the goggles and swim fins, while orange accents pick up the snorkel tip. A wave print complements the playful aquatic accessories."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_008:B",
+        "test:20261115_015259_003828:batch_008:A",
+        "test:manual:o3",
+        "test:manual:o9"
+      ],
+      "filter_text_ranking": [
+        "test:manual:o3",
+        "test:manual:o9",
+        "test:20261115_015259_003828:batch_008:A",
+        "test:20261115_015259_003828:batch_008:B"
+      ]
+    },
+    "TRF053": {
+      "query": {
+        "query": "Forest green casual sweatshirt, regular fit, crew neck, long sleeves, soft cotton fleece, ribbed cuffs and hem, solid color",
+        "reason": "The clean, relaxed sweatshirt balances the textured black leather motorcycle pants and tall black boots, while forest green complements the dark accessories."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_007:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF046": {
+      "query": {
+        "query": "Casual forest green sweatshirt, relaxed straight fit, crew neckline, long sleeves, ribbed cuffs and hem, soft cotton fleece, minimal detailing",
+        "reason": "The simple silhouette complements the fitted beige riding breeches and tall brown boots, while forest green works with the black helmet and equestrian styling."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261115_015259_003828:batch_013:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ]
+    },
+    "TRF042": {
+      "query": {
+        "query": "Casual cream sweatshirt with a crew neckline, relaxed straight fit, long sleeves, ribbed cuffs and hem, and solid cotton fleece",
+        "reason": "Replacing the gray sweatshirt, the cream color echoes the Santa hat’s white trim and balances the red trousers. The relaxed shape and simple details suit the casual trousers and black boots."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ]
+    },
+    "TRF038": {
+      "query": {
+        "query": "Casual charcoal gray sweatshirt, relaxed fit, crew neck, long sleeves, ribbed cuffs and hem, hip-length, soft fleece, minimal detailing",
+        "reason": "Charcoal adds contrast to the black flared skirt, tights, ankle boots, and pointed hat, while the simple silhouette keeps the look balanced."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ]
+    },
+    "TRF027": {
+      "query": {
+        "query": "Men's deep teal tailored waistcoat, single-breasted button front, deep V-neck, fitted silhouette, welt pockets and pointed hem",
+        "reason": "Replacing the waistcoat, this tailored style complements the retained white shirt, charcoal trousers and polished black shoes."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261115_123348_479882:batch_005:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261115_123348_479882:batch_005:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261114_222049_865871:batch_028:A",
+        "test:20261114_222049_865871:batch_028:B",
+        "test:20261115_123348_479882:batch_003:A",
+        "test:20261115_123348_479882:batch_003:B",
+        "test:20261114_222049_865871:batch_010:B",
+        "test:20261114_222049_865871:batch_010:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_013:B",
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_013:A"
+      ]
+    },
+    "TRF052": {
+      "query": {
+        "query": "Casual charcoal gray sweatshirt, relaxed straight fit, crew neck, long sleeves, ribbed cuffs and hem, smooth midweight cotton fleece, minimal detailing",
+        "reason": "The understated shape and soft texture balance the black leather trousers and tall boots, while charcoal complements the dark helmet and hair."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261115_015259_003828:batch_013:A",
+        "test:20261115_015259_003828:batch_013:B"
+      ]
+    },
+    "TRF064": {
+      "query": {
+        "query": "Expressive ivory blouse with embroidered floral details, softly puffed sleeves, a relaxed fit, and a tuckable hem",
+        "reason": "Floral embroidery echoes the cream crochet belt, while the ivory color complements the rust midi skirt and tan sandals. Soft sleeves suit the relaxed hairstyle and flowing silhouette."
+      },
+      "photo_ranking": [
+        "test:20261115_123348_479882:batch_005:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_017:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A"
+      ]
+    },
+    "TRF028": {
+      "query": {
+        "query": "Expressive burgundy vest top, sleeveless deep V-neck, fitted waist-length silhouette, button front, textured woven fabric and colorful floral embroidery",
+        "reason": "Replacing the teal vest, this embroidered layer complements the retained cream blouse, mustard skirt and tan sandals. Its fitted shape balances the blouse’s full sleeves and the skirt’s volume."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261115_123348_479882:batch_005:A",
+        "test:20261115_123348_479882:batch_005:B"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A"
+      ]
+    },
+    "TRF047": {
+      "query": {
+        "query": "Forest green casual crewneck sweatshirt, relaxed fit, hip length, long sleeves, soft cotton fabric and ribbed cuffs and hem",
+        "reason": "The relaxed sweatshirt pairs with the beige riding breeches, while forest green complements the dark brown riding boots and equestrian accessories."
+      },
+      "photo_ranking": [
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261114_222049_865871:batch_007:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_007:A",
+        "test:20261114_222049_865871:batch_007:B",
+        "test:20261115_015259_003828:batch_016:B",
+        "test:20261115_015259_003828:batch_016:A"
+      ]
+    },
+    "TRF062": {
+      "query": {
+        "query": "Expressive black one-shoulder top in smooth stretch jersey, with a fitted silhouette, asymmetric neckline, long sleeve, and softly ruched waist",
+        "reason": "Replacing the gray top, the fitted black design balances the silver sequin flared trousers and ties in with the black shoes and dark waves."
+      },
+      "photo_ranking": [
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261115_123348_479882:batch_005:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261114_222049_865871:batch_017:A"
+      ],
+      "filter_text_ranking": [
+        "test:20261114_222049_865871:batch_017:B",
+        "test:20261114_222049_865871:batch_017:A",
+        "test:20261115_123348_479882:batch_005:B",
+        "test:20261115_123348_479882:batch_005:A"
+      ]
+    }
+  },
+  "decisions": {
+    "finished_looks": {
+      "FC003": {
+        "sku": "test:manual:b6",
+        "reason": "The floral embroidery and patterned cuffs echo the retained embroidered vest and colorful scarf, while the straight legs work with the brown boots. Product 1 is plainer, while 3's bows and 4's heavy distressing compete with the outfit's bohemian details."
+      },
+      "FC002": {
+        "sku": "test:manual:b3",
+        "reason": "The clean, straight-leg medium-blue denim complements the brown workwear jacket and rugged boots. Product 2’s floral details are busier, while the bows on 3 and heavy distressing on 4 compete with the outfit’s understated look."
+      },
+      "FC010": {
+        "sku": "test:20261114_222049_865871:batch_009:B",
+        "reason": "The cream suns and moons echo the celestial pattern and light accents in the retained navy scarf; the fern print on product 2 has a less direct connection."
+      },
+      "FC006": {
+        "sku": "test:20261114_222049_865871:batch_001:B",
+        "reason": "The pinstripes echo the retained blazer, creating a coordinated suit-like look; product 1’s plain black finish is more understated."
+      },
+      "FC017": {
+        "sku": "test:20261115_015259_003828:batch_008:A",
+        "reason": "The piano-key graphic echoes the retained keyboard, creating a clear musical theme. Product 2’s clownfish graphic has no comparable connection to the outfit."
+      },
+      "FC015": {
+        "sku": "test:20261114_222049_865871:batch_028:A",
+        "reason": "The streamlined crewneck fits neatly under the retained navy blazer, while its coral color adds a crisp contrast to the cream trousers. Product 2’s flared sleeves would be harder to layer beneath the blazer."
+      },
+      "FC011": {
+        "sku": "test:20261114_222049_865871:batch_010:A",
+        "reason": "The burgundy cherry graphic echoes the cherries on the retained tote, creating a clearer connection than the strawberry on product 2, while the cream tee works with the navy trousers."
+      },
+      "FC013": {
+        "sku": "test:20261114_222049_865871:batch_017:A",
+        "reason": "The peaked lapels and double-breasted cut echo the tailored charcoal trousers and polished black shoes, while the teal velvet adds an expressive contrast to the cream shirt. Product 2’s side-tie wrap is less connected to the outfit’s formal structure."
+      },
+      "FC012": {
+        "sku": "test:20261114_222049_865871:batch_010:B",
+        "reason": "The burgundy strawberry graphic echoes the strawberry on the retained tote, creating a clearer connection than the cherry print on product 1. The cream also pairs easily with the navy skirt and white shoes."
+      },
+      "FC001": {
+        "sku": "test:manual:b1",
+        "reason": "The skirt’s dusty-pink ribbons echo the cardigan, while its cream lace picks up the delicate neckline. Its full tiers also balance the fitted top more cohesively than product 1’s cooler lavender details."
+      },
+      "FC018": {
+        "sku": "test:20261115_015259_003828:batch_008:B",
+        "reason": "The clownfish graphic connects directly to the retained snorkel mask and blue fins, while its orange echoes the snorkel tip. The piano-key graphic on product 1 has no comparable connection to the accessories."
+      },
+      "FC007": {
+        "sku": "test:20261114_222049_865871:batch_007:A",
+        "reason": "The white double stripes on the collar echo the striped socks and tie in with the white shorts and headband. Product 2’s scalloped trim is less connected to the sporty look."
+      },
+      "FC005": {
+        "sku": "test:20261114_222049_865871:batch_001:B",
+        "reason": "The fine white pinstripes echo the blazer’s white windowpane lines, while their narrower scale creates an intentional pattern mix. The plain cream shirt and black shoes keep the look grounded; product 1 is more understated but less visually connected."
+      },
+      "FC014": {
+        "sku": "test:20261114_222049_865871:batch_017:B",
+        "reason": "The velvet wrap and side tie complement the blouse’s soft sleeves and define the waist above the flowing mustard skirt. Product 1’s structured lapels and double-breasted front feel more formal against those relaxed pieces."
+      },
+      "FC009": {
+        "sku": "test:20261114_222049_865871:batch_009:A",
+        "reason": "The cream fern motifs echo the botanical print on the retained tote and tie in with the cream blouse. Product 2’s sun-and-moon motifs have a less direct connection to the outfit."
+      },
+      "FC019": {
+        "sku": "test:20261115_015259_003828:batch_013:A",
+        "reason": "The orange jack-o’-lantern graphic reinforces the retained black witch hat, creating a cohesive Halloween look; the Christmas tree on product 2 would clash with that theme."
+      },
+      "FC016": {
+        "sku": "test:20261114_222049_865871:batch_028:A",
+        "reason": "The slim sleeves fit neatly under the retained cream vest and balance the flowing navy skirt. Product 1’s flared sleeves would compete with the skirt’s volume and the brown cuffs."
+      },
+      "FC020": {
+        "sku": "test:20261115_015259_003828:batch_013:B",
+        "reason": "The Christmas tree graphic connects directly with the retained Santa hat, creating a cohesive festive look; the pumpkin on product 1 clashes with that theme."
+      },
+      "FC004": {
+        "sku": "test:manual:o9",
+        "reason": "Product 2’s burgundy lace and tiered skirt echo the burgundy ankle-strap heels and complement the romantic updo. Product 1’s glossy racing details create a less cohesive contrast with those retained elements."
+      },
+      "FC021": {
+        "sku": "test:20261115_015259_003828:batch_016:A",
+        "reason": "The cream horse-and-rider graphic echoes the retained riding helmet, saddle and boots, while its color ties in with the beige breeches. The motorcycle graphic on product 1 is less connected to the equestrian outfit."
+      },
+      "FC026": {
+        "sku": "test:20261115_123348_479882:batch_005:B",
+        "reason": "The cream crochet shoulders echo the retained crochet belt, tying the purple blouse to the rust skirt and tan sandals more naturally than the silver sequins on product 2."
+      },
+      "FC023": {
+        "sku": "test:20261115_123348_479882:batch_003:B",
+        "reason": "The navy shirt creates a clear tonal contrast with the light-blue skirt and echoes her dark hair. Product 1 is closer to the skirt’s color, making the pairing less defined."
+      },
+      "FC025": {
+        "sku": "test:20261115_123348_479882:batch_005:A",
+        "reason": "The silver sequin shoulders echo the retained silver sequin trousers, creating a cohesive look; product 2’s cream crochet trim has a weaker connection."
+      },
+      "FC024": {
+        "sku": "test:20261115_123348_479882:batch_003:A",
+        "reason": "The light blue shirt contrasts clearly with the retained navy skirt, while its crisp color works with the white shoes. The navy shirt would blend more closely into the skirt."
+      },
+      "FC022": {
+        "sku": "test:20261115_015259_003828:batch_016:B",
+        "reason": "The motorcycle graphic connects directly with the retained helmet and black leather riding pants, creating a more cohesive biker look than the horse graphic on product 2."
+      },
+      "TRF004": {
+        "sku": "test:manual:b3",
+        "reason": "The blue jeans pick up the blue in the floral shirt while providing a calm, casual base for the embroidered vest, scarf and brown boots. The embroidered shorts (1 and 3) are less balanced with the boots, the black trousers (2 and 4) feel more formal, and the embellished jeans (6) compete with the patterned layers."
+      },
+      "TRF010": {
+        "sku": "test:20261114_222049_865871:batch_007:A",
+        "reason": "The polo’s double white collar stripes echo the striped socks, while its sporty shape suits the white shorts and headband. Product 2’s scalloped trim is less athletic, and the graphic sweatshirts in 3 and 4 feel less connected to the tennis-inspired outfit."
+      },
+      "TRF012": {
+        "sku": "test:20261114_222049_865871:batch_007:A",
+        "reason": "The green polo’s white double-striped collar echoes the green-and-white striped socks, while its clean athletic shape works with the white shorts and sneakers."
+      },
+      "TRF005": {
+        "sku": "test:manual:b1",
+        "reason": "The skirt’s pink ribbons echo the cardigan, while its ivory lace picks up the lace neckline and complements the delicate heels. The lavender accents of 2 are less connected; the casual shorts 3 and 4 and tailored trousers 5 and 6 don’t reinforce the outfit’s romantic details as clearly."
+      },
+      "TRF008": {
+        "sku": "test:20261114_222049_865871:batch_001:A",
+        "reason": "The clean black tailoring echoes the blazer and loafers while letting the windowpane pattern stand out. It makes a more cohesive look than the competing pinstripes, casual denim, embellished jeans, or printed shorts."
+      },
+      "TRF021": {
+        "sku": "test:20261114_222049_865871:batch_009:B",
+        "reason": "The cream sun and moon motifs echo the celestial pattern and pale accents in the retained navy scarf, creating a more distinctive connection than the other bottoms."
+      },
+      "TRF016": {
+        "sku": "test:20261114_222049_865871:batch_010:A",
+        "reason": "The cream tee echoes the wide-leg trousers, while its compact burgundy cherry graphic connects warmly with the brown Mary Janes. The larger strawberry on 5 is less restrained; 1 and 4 are more tailored, while the coral tops 2 and 3 have less connection to the retained pieces."
+      },
+      "TRF006": {
+        "sku": "test:manual:o9",
+        "reason": "The burgundy lace and layered skirt echo the retained burgundy heels, while the celestial embellishments complement her romantic updo. The racing dress and two casual graphic jumpsuits have a less cohesive connection to the formal shoes."
+      },
+      "TRF018": {
+        "sku": "test:20261114_222049_865871:batch_009:A",
+        "reason": "The olive shorts’ cream fern motifs echo the botanical print on the retained tote and tie in with the ivory shirt. This creates a more cohesive casual look than the celestial print or denim alternatives."
+      },
+      "TRF014": {
+        "sku": "test:20261114_222049_865871:batch_007:B",
+        "reason": "The polo’s white scalloped collar echoes the white socks and complements the cream trousers, while its soft, preppy detail suits the brown Mary Janes."
+      },
+      "TRF003": {
+        "sku": "test:manual:b6",
+        "reason": "The floral embroidery and patterned cuffs echo the retained floral vest and colorful scarf, while the straight-leg denim works with the brown boots."
+      },
+      "TRF022": {
+        "sku": "test:20261114_222049_865871:batch_010:A",
+        "reason": "The burgundy cherry graphic directly echoes the cherries on the retained tote, while the cream tee complements the navy trousers and white sneakers. The other tops lack that precise motif match."
+      },
+      "TRF002": {
+        "sku": "test:manual:b3",
+        "reason": "The straight-leg blue jeans complement the rugged brown jacket and work boots, creating a cohesive workwear look. The floral details on 2 are busier, 3 and 5 are dressier, and the embellishments on 4 and 6 overwhelm the understated layers."
+      },
+      "TRF017": {
+        "sku": "test:20261114_222049_865871:batch_007:B",
+        "reason": "The white scalloped collar echoes the white socks and complements the brown Mary Janes, while the fitted green polo balances the cream wide-leg trousers."
+      },
+      "TRF001": {
+        "sku": "test:manual:b3",
+        "reason": "The straight-leg blue jeans balance the rugged brown jacket and work shoes, creating a cohesive casual look. The patterned shorts and embellished jeans compete more with the outfit’s understated workwear style."
+      },
+      "TRF019": {
+        "sku": "test:20261114_222049_865871:batch_009:A",
+        "reason": "The olive shorts’ cream fern motifs echo the botanical tote and tie in with the cream blouse, creating a cohesive casual look."
+      },
+      "TRF020": {
+        "sku": "test:20261114_222049_865871:batch_009:B",
+        "reason": "The cream suns and moons on the olive shorts echo the celestial pattern and light accents of the retained navy scarf, creating a cohesive casual look."
+      },
+      "TRF026": {
+        "sku": "test:20261114_222049_865871:batch_017:A",
+        "reason": "The teal velvet lapels and double-breasted tailoring complement the retained ivory shirt, charcoal trousers and black dress shoes. Products 1 and 2 offer contrasting purple and decorative shoulders, while 4’s side tie is less closely aligned with the outfit’s tailored lines."
+      },
+      "TRF034": {
+        "sku": "test:20261115_015259_003828:batch_008:A",
+        "reason": "The piano-key graphic echoes the keyboard she’s holding, while the navy jumpsuit works naturally with her black sneakers. The other designs lack that direct connection."
+      },
+      "TRF035": {
+        "sku": "test:20261115_015259_003828:batch_008:A",
+        "reason": "The piano-key graphic directly echoes the retained keytar, while the navy jumpsuit works with her black sneakers. The fish print on 2, racing details on 3, and ornate celestial styling on 4 have weaker connections to the retained elements."
+      },
+      "TRF024": {
+        "sku": "test:20261114_222049_865871:batch_010:B",
+        "reason": "The cream tee’s burgundy strawberry graphic directly echoes the retained tote, while its neutral base pairs easily with the navy skirt and white shoes."
+      },
+      "TRF036": {
+        "sku": "test:20261115_015259_003828:batch_008:B",
+        "reason": "The clownfish graphic connects directly to the retained snorkel and blue flippers, while its orange echoes the snorkel tip. The piano, racing and celestial motifs have less connection to the remaining accessories."
+      },
+      "TRF053": {
+        "sku": "test:20261115_015259_003828:batch_016:B",
+        "reason": "The motorcycle graphic connects directly to the retained helmet, leather pants and boots. The horse graphic and the two polos lack that cohesive biker link."
+      },
+      "TRF046": {
+        "sku": "test:20261115_015259_003828:batch_016:A",
+        "reason": "The cream horse-and-rider graphic echoes the beige breeches and connects directly to the riding helmet and saddle."
+      },
+      "TRF042": {
+        "sku": "test:20261115_015259_003828:batch_013:B",
+        "reason": "The Christmas tree graphic reinforces the Santa hat, while the burgundy sweatshirt complements the red trousers for a cohesive festive look."
+      },
+      "TRF038": {
+        "sku": "test:20261115_015259_003828:batch_013:A",
+        "reason": "The orange jack-o'-lantern graphic connects directly with the retained black witch hat, creating a cohesive Halloween look; the motorcycle, horse, and Christmas tree prints lack that connection."
+      },
+      "TRF027": {
+        "sku": "test:20261115_123348_479882:batch_003:A",
+        "reason": "The light-blue collared shirt contrasts cleanly with the teal waistcoat, while its tailored style suits the charcoal trousers and black dress shoes."
+      },
+      "TRF052": {
+        "sku": "test:20261115_015259_003828:batch_016:B",
+        "reason": "The motorcycle graphic connects directly with the retained helmet and black leather riding pants and boots, creating a more cohesive look than the horse or holiday graphics."
+      },
+      "TRF064": {
+        "sku": "test:20261115_123348_479882:batch_005:B",
+        "reason": "The cream crochet shoulders echo the retained crochet belt, while the rich purple contrasts expressively with the rust skirt."
+      },
+      "TRF028": {
+        "sku": "test:20261114_222049_865871:batch_017:B",
+        "reason": "The teal velvet wrap vest contrasts richly with the mustard skirt, while its soft bow complements the retained cream blouse and flowing silhouette."
+      },
+      "TRF047": {
+        "sku": "test:20261115_015259_003828:batch_016:A",
+        "reason": "The cream horse-and-rider graphic echoes the beige breeches and connects directly with the saddle and riding boots, creating a cohesive equestrian look."
+      },
+      "TRF062": {
+        "sku": "test:20261115_123348_479882:batch_005:A",
+        "reason": "The silver sequin shoulders directly echo the retained sequin trousers, while the deep purple adds contrast. The velvet tops (1 and 4) and lace-trimmed top (3) lack that clear connection."
+      }
+    }
+  },
+  "relevant_skus": {
+    "FC002": [
+      "test:manual:b3"
+    ],
+    "FC003": [
+      "test:manual:b3",
+      "test:manual:b6"
+    ],
+    "FC001": [
+      "test:manual:b1"
+    ],
+    "FC004": [
+      "test:manual:o9"
+    ],
+    "FC005": [
+      "test:20261114_222049_865871:batch_001:A"
+    ],
+    "FC006": [
+      "test:20261114_222049_865871:batch_001:B"
+    ],
+    "FC007": [
+      "test:20261114_222049_865871:batch_007:A"
+    ],
+    "FC009": [
+      "test:20261114_222049_865871:batch_009:A"
+    ],
+    "FC010": [
+      "test:20261114_222049_865871:batch_009:B"
+    ],
+    "FC011": [
+      "test:20261114_222049_865871:batch_010:A"
+    ],
+    "FC012": [
+      "test:20261114_222049_865871:batch_010:B"
+    ],
+    "FC013": [
+      "test:20261114_222049_865871:batch_017:A"
+    ],
+    "FC014": [
+      "test:20261114_222049_865871:batch_017:B"
+    ],
+    "FC015": [
+      "test:20261114_222049_865871:batch_028:A"
+    ],
+    "FC016": [
+      "test:20261114_222049_865871:batch_028:B"
+    ],
+    "FC017": [
+      "test:20261115_015259_003828:batch_008:A"
+    ],
+    "FC018": [
+      "test:20261115_015259_003828:batch_008:B"
+    ],
+    "FC019": [
+      "test:20261115_015259_003828:batch_013:A"
+    ],
+    "FC020": [
+      "test:20261115_015259_003828:batch_013:B"
+    ],
+    "FC021": [
+      "test:20261115_015259_003828:batch_016:A"
+    ],
+    "FC022": [
+      "test:20261115_015259_003828:batch_016:B"
+    ],
+    "FC023": [
+      "test:20261115_123348_479882:batch_003:A"
+    ],
+    "FC024": [
+      "test:20261115_123348_479882:batch_003:B"
+    ],
+    "FC025": [
+      "test:20261115_123348_479882:batch_005:A"
+    ],
+    "FC026": [
+      "test:20261115_123348_479882:batch_005:B"
+    ],
+    "TRF001": [
+      "test:manual:b3"
+    ],
+    "TRF002": [
+      "test:20261114_222049_865871:batch_001:A",
+      "test:manual:b3"
+    ],
+    "TRF003": [
+      "test:20261114_222049_865871:batch_009:A",
+      "test:manual:b3",
+      "test:manual:b6"
+    ],
+    "TRF004": [
+      "test:20261114_222049_865871:batch_009:A",
+      "test:manual:b3",
+      "test:manual:b6"
+    ],
+    "TRF005": [
+      "test:manual:b1",
+      "test:manual:b2",
+      "test:manual:b3"
+    ],
+    "TRF006": [
+      "test:manual:o9"
+    ],
+    "TRF008": [
+      "test:20261114_222049_865871:batch_001:A",
+      "test:20261114_222049_865871:batch_001:B"
+    ],
+    "TRF010": [
+      "test:20261114_222049_865871:batch_007:A"
+    ],
+    "TRF012": [
+      "test:20261114_222049_865871:batch_007:A"
+    ],
+    "TRF014": [
+      "test:20261114_222049_865871:batch_007:A",
+      "test:20261114_222049_865871:batch_007:B"
+    ],
+    "TRF016": [
+      "test:20261114_222049_865871:batch_007:A",
+      "test:20261114_222049_865871:batch_007:B",
+      "test:20261114_222049_865871:batch_028:A",
+      "test:20261114_222049_865871:batch_028:B",
+      "test:20261115_123348_479882:batch_003:A",
+      "test:20261115_123348_479882:batch_003:B"
+    ],
+    "TRF017": [
+      "test:20261114_222049_865871:batch_007:A",
+      "test:20261114_222049_865871:batch_007:B",
+      "test:20261114_222049_865871:batch_028:A",
+      "test:20261114_222049_865871:batch_028:B",
+      "test:20261115_123348_479882:batch_003:A",
+      "test:20261115_123348_479882:batch_003:B"
+    ],
+    "TRF018": [
+      "test:20261114_222049_865871:batch_009:A",
+      "test:20261114_222049_865871:batch_009:B",
+      "test:manual:b3",
+      "test:manual:b6"
+    ],
+    "TRF019": [
+      "test:20261114_222049_865871:batch_009:A",
+      "test:20261114_222049_865871:batch_009:B",
+      "test:manual:b3",
+      "test:manual:b6"
+    ],
+    "TRF020": [
+      "test:20261114_222049_865871:batch_009:B",
+      "test:manual:b3"
+    ],
+    "TRF021": [
+      "test:20261114_222049_865871:batch_001:A",
+      "test:20261114_222049_865871:batch_009:B",
+      "test:manual:b3"
+    ],
+    "TRF022": [
+      "test:20261114_222049_865871:batch_007:A",
+      "test:20261114_222049_865871:batch_007:B",
+      "test:20261114_222049_865871:batch_010:A",
+      "test:20261114_222049_865871:batch_010:B",
+      "test:20261114_222049_865871:batch_028:A",
+      "test:20261115_123348_479882:batch_003:A",
+      "test:20261115_123348_479882:batch_003:B"
+    ],
+    "TRF024": [
+      "test:20261114_222049_865871:batch_007:A",
+      "test:20261114_222049_865871:batch_007:B",
+      "test:20261114_222049_865871:batch_010:A",
+      "test:20261114_222049_865871:batch_010:B",
+      "test:20261114_222049_865871:batch_028:B",
+      "test:20261115_015259_003828:batch_013:B",
+      "test:20261115_123348_479882:batch_003:A",
+      "test:20261115_123348_479882:batch_003:B"
+    ],
+    "TRF026": [
+      "test:20261114_222049_865871:batch_017:A"
+    ],
+    "TRF027": [
+      "test:20261114_222049_865871:batch_017:A",
+      "test:20261115_123348_479882:batch_003:A",
+      "test:20261115_123348_479882:batch_003:B"
+    ],
+    "TRF028": [
+      "test:20261114_222049_865871:batch_017:A",
+      "test:20261114_222049_865871:batch_017:B"
+    ],
+    "TRF034": [
+      "test:20261115_015259_003828:batch_008:A",
+      "test:manual:o3"
+    ],
+    "TRF035": [
+      "test:20261115_015259_003828:batch_008:A"
+    ],
+    "TRF036": [
+      "test:20261115_015259_003828:batch_008:B"
+    ],
+    "TRF038": [
+      "test:20261115_015259_003828:batch_013:A"
+    ],
+    "TRF042": [
+      "test:20261115_015259_003828:batch_013:B"
+    ],
+    "TRF046": [
+      "test:20261115_015259_003828:batch_016:A"
+    ],
+    "TRF047": [
+      "test:20261114_222049_865871:batch_007:A",
+      "test:20261115_015259_003828:batch_016:A"
+    ],
+    "TRF052": [
+      "test:20261115_015259_003828:batch_016:B"
+    ],
+    "TRF053": [
+      "test:20261115_015259_003828:batch_016:B"
+    ],
+    "TRF062": [
+      "test:20261115_123348_479882:batch_005:A"
+    ],
+    "TRF064": [
+      "test:20261115_123348_479882:batch_005:B"
+    ]
+  }
+}

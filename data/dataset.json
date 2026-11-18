@@ -1,0 +1,33 @@
+{
+  "version": "2026-11-16-diagnostic",
+  "splits": {
+    "validation": {
+      "scenarios": 114,
+      "original": 50,
+      "partial_filters": 64,
+      "photos": 51,
+      "catalog": 59
+    },
+    "test": {
+      "scenarios": 57,
+      "original": 25,
+      "partial_filters": 32,
+      "photos": 26,
+      "catalog": 30
+    }
+  },
+  "validation_scope": "Reduced by five queries with repeated errors in two prior finished_looks runs. Ties resolved by query ID.",
+  "excluded_validation_ids": [
+    "FC009",
+    "FC034",
+    "VRF025",
+    "VRF095",
+    "VRF108"
+  ],
+  "recommendation": {
+    "model": "gpt-6.1-terra",
+    "reasoning_effort": "medium",
+    "k": 6,
+    "selection_prompt": "finished_looks"
+  }
+}

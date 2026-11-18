@@ -1,0 +1,4603 @@
+{
+  "model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "k": 6,
+  "prompts": {
+    "v3": "You are a fashion stylist identifying which of candidate garments integrates more successfully into an existing outfit.\nBoth candidates already satisfy the requested garment type, color, and style.\nEvaluate each candidate as a replacement within the complete outfit, keeping all unaffected clothing, footwear, accessories, and personal styling.\nLook for actual visual incompatibilities, not differences in style labels.\nCheck whether the candidate creates problems with color relationships, competing patterns, conflicting textures, unbalanced proportions, excessive visual concentration, or disconnected design elements.\nDistinguish genuine visual conflicts from intentional contrast. Contrasting colors, aesthetics, volumes, and textures are acceptable when they create a convincing overall composition.\nFor each candidate, identify its strongest visual connection to the retained outfit and its most significant potential conflict.\nDo not invent problems when the combination works well.\nCompare the severity and importance of the identified conflicts, considering the complete outfit rather than the product in isolation.\nPrefer the candidate that produces the more successful overall composition, even if the alternative has more individually attractive or distinctive features.\nExplain the specific visual interactions that determine the choice.\nCompare every numbered product. Return JSON with integer choice and reason.",
+    "finished_looks": "Choose the numbered product that would make the best complete look for the person in the first photo.\n\nMentally remove the garment being replaced. Keep the same visible clothing that remains, shoes, accessories, hair and makeup in every alternative. Treat the removed garment only as a pointer to the replacement slot. Use the requested filters as context; all products already passed them.\n\nPicture the finished outfit with each product in turn. Look for the strongest visual connection: for example, a detail picked up by an accessory, a silhouette balanced by the remaining layers, or an intentional contrast in color, pattern or texture. Prefer the complete outfit with the clearest visual idea. Bold, contrasting and understated looks can all work. When visible context is sparse, make the modest comparison the photo supports.\n\nCompare every numbered product. Return JSON with integer choice and reason. State the concrete candidate feature and retained element that decide the comparison.\nCompare every numbered product. Return JSON with integer choice and reason.",
+    "style_rules": "Choose the numbered replacement garment that works best in the complete outfit shown in the first image. Every candidate already meets the supplied filters. Use only the image and request as evidence.\n\nFirst identify the replacement slot and the visible pieces that will stay. The old garment only identifies the slot. Its color, cut, decoration, and style must play no part in the comparison. When replacing a dress or jumpsuit, use the shoes, bag, jewelry, hair, makeup, and other visible accessories as your anchors.\n\nApply the following styling rules to both candidates in the same way:\n- Aesthetic and formality: read the outfit through its remaining pieces and styling. A broad label such as expressive can cover very different aesthetics. Use visible cues such as lace and delicate jewelry, hardware and chunky boots, or structured tailoring and polished shoes. Mixed aesthetics work when a visible detail connects them.\n- Palette: look for a shared color, related undertone, or deliberate accent. Consider the proportion and placement of color across the whole outfit. A contrasting accent can improve an outfit if it relates to another visible element or gives the composition a clear focal point.\n- Silhouette and scale: consider how the candidate's length, cut, and volume meet the retained pieces. Look at waist placement, hem lines, layers, and the relationship to footwear. Judge the balance of the whole silhouette. A loose, fitted, or dramatic shape can each work with the right proportions.\n- Pattern, texture, and visual emphasis: check whether prints differ in scale and whether color or motif connects them. Consider fabric weight, sheen, surface detail, and how attention is distributed. Two strong details can work together when they reinforce the same idea; penalize them when they compete at the same focal point.\n- Visible context: account for activity, weather, and practicality when there is clear evidence in the remaining outfit, footwear, or equipment. Avoid inferring a dress code, preferences, or body measurements from limited evidence.\n\nCompare every numbered product. Give the strongest reason for each candidate and weigh the most important difference. A major mismatch in formality, proportions, or visible use should outweigh a coincidental match in a minor detail. When evidence is sparse, keep the justification modest. Return JSON with integer choice and reason, citing the deciding candidate feature and specific retained elements.\nCompare every numbered product. Return JSON with integer choice and reason."
+  },
+  "rankings": {
+    "FC003": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:manual:t3"
+      ],
+      "photo_ranking": [
+        "validation:manual:t3",
+        "validation:manual:t4"
+      ],
+      "query": {
+        "query": "White expressive blouse with a fitted waist, V-neckline, lace trim, softly puffed long sleeves, and a hip-length hem"
+      }
+    },
+    "FC001": {
+      "filter_text_ranking": [
+        "validation:manual:t1",
+        "validation:manual:t2"
+      ],
+      "photo_ranking": [
+        "validation:manual:t1",
+        "validation:manual:t2"
+      ],
+      "query": {
+        "query": "Pink coquette cardigan, fitted and cropped, with a scoop neckline, delicate buttons, lace trim, and fine-knit long sleeves"
+      }
+    },
+    "FC018": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:A"
+      ],
+      "query": {
+        "query": "Black casual overshirt in cotton twill, waist-length straight fit, pointed collar, button front, long cuffed sleeves and chest pockets"
+      }
+    },
+    "FC012": {
+      "filter_text_ranking": [
+        "validation:manual:o10",
+        "validation:manual:o11"
+      ],
+      "photo_ranking": [
+        "validation:manual:o10",
+        "validation:manual:o11"
+      ],
+      "query": {
+        "query": "Pink formal dress with a softly draped neckline, fitted waist, fluid ankle-length skirt, and smooth satin finish"
+      }
+    },
+    "FC016": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A"
+      ],
+      "query": {
+        "query": "Beige casual sweatshirt, solid cotton fleece, relaxed fit, crew neckline, long sleeves, ribbed cuffs and hem, hip length"
+      }
+    },
+    "FC019": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:A"
+      ],
+      "query": {
+        "query": "Black casual overshirt in cotton twill, relaxed hip-length fit, pointed collar, button front, long sleeves and buttoned cuffs"
+      }
+    },
+    "FC004": {
+      "filter_text_ranking": [
+        "validation:manual:t7",
+        "validation:manual:t5",
+        "validation:manual:t6"
+      ],
+      "photo_ranking": [
+        "validation:manual:t7",
+        "validation:manual:t5",
+        "validation:manual:t6"
+      ],
+      "query": {
+        "query": "White tailored blazer with a fitted waist, hip-length hem, notched lapels, gold buttons, and structured flap pockets"
+      }
+    },
+    "FC021": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_003:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_003:A"
+      ],
+      "query": {
+        "query": "Cream casual sweater in a fine knit, with a relaxed fit, crew neckline, long sleeves, ribbed cuffs and hip-length hem"
+      }
+    },
+    "FC013": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o6"
+      ],
+      "photo_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o6"
+      ],
+      "query": {
+        "query": "Pink expressive one-shoulder dress with a sculptural ruffled neckline, fitted waist, and softly layered chiffon mini skirt"
+      }
+    },
+    "FC017": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A"
+      ],
+      "query": {
+        "query": "Beige casual sweatshirt, solid midweight fleece, relaxed regular fit, crew neckline, long sleeves, ribbed cuffs and hem"
+      }
+    },
+    "FC008": {
+      "filter_text_ranking": [
+        "validation:manual:o8",
+        "validation:manual:o4"
+      ],
+      "photo_ranking": [
+        "validation:manual:o4",
+        "validation:manual:o8"
+      ],
+      "query": {
+        "query": "Red expressive evening dress, floor-length fitted silhouette, draped satin, asymmetrical neckline, sculptural gathered waist and thigh-high side slit"
+      }
+    },
+    "FC015": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_212951_687232:batch_001:B"
+      ],
+      "query": {
+        "query": "Navy casual skirt, knee-length A-line silhouette, cotton twill, comfortable elastic waist, side pockets, solid color"
+      }
+    },
+    "FC002": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:manual:t3"
+      ],
+      "photo_ranking": [
+        "validation:manual:t3",
+        "validation:manual:t4"
+      ],
+      "query": {
+        "query": "White expressive blouse with a fitted waist, square neckline, short puff sleeves, delicate lace trim, and waist-length hem"
+      }
+    },
+    "FC024": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_011:A"
+      ],
+      "query": {
+        "query": "Expressive plum blouse with a draped cowl neckline, billowy long sleeves, gathered cuffs, and a soft, tuckable silhouette"
+      }
+    },
+    "FC025": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_011:A"
+      ],
+      "query": {
+        "query": "Expressive plum blouse in softly draped satin, relaxed tuckable fit, round neckline, long sleeves and subtly gathered cuffs"
+      }
+    },
+    "FC023": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_006:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "query": {
+        "query": "Black casual shirt in cotton, slim fit, long sleeves, pointed collar, button front, and a tuckable hem"
+      }
+    },
+    "FC022": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_006:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_006:A"
+      ],
+      "query": {
+        "query": "Black casual shirt in cotton, relaxed fit, hip-length hem, pointed collar, button front and long sleeves with cuffs"
+      }
+    },
+    "FC006": {
+      "filter_text_ranking": [
+        "validation:manual:o5",
+        "validation:manual:o1",
+        "validation:manual:o2"
+      ],
+      "photo_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o2"
+      ],
+      "query": {
+        "query": "Black expressive dress with an asymmetrical neckline, sculpted fitted bodice, and flowing pleated midi skirt in lightweight fabric"
+      }
+    },
+    "FC026": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A"
+      ],
+      "query": {
+        "query": "Navy casual jacket in soft cotton twill, waist-length and unstructured, with a relaxed fit, simple collar, long sleeves and patch pockets"
+      }
+    },
+    "FC031": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A"
+      ],
+      "query": {
+        "query": "Expressive black henley top, fitted fine-rib knit, waist-length hem, subtly puffed long sleeves, pearl-button placket and scalloped neckline"
+      }
+    },
+    "FC029": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:A"
+      ],
+      "query": {
+        "query": "Casual teal sweater vest, sleeveless V-neck, solid fine-gauge knit, relaxed fit, hip length, ribbed hem and armholes"
+      }
+    },
+    "FC038": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A"
+      ],
+      "query": {
+        "query": "Navy casual trousers in sturdy cotton twill, straight-leg fit, full length, mid-rise waist, belt loops and practical pockets"
+      }
+    },
+    "FC028": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:A"
+      ],
+      "query": {
+        "query": "Casual teal sweater vest, fine-gauge knit, V-neck, regular fit, hip length, solid color, ribbed hem and armhole trim"
+      }
+    },
+    "FC030": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A"
+      ],
+      "query": {
+        "query": "Expressive black henley top, fitted ribbed knit, long sleeves, scoop neckline, silver snap-button placket and contrast seam stitching"
+      }
+    },
+    "FC005": {
+      "filter_text_ranking": [
+        "validation:manual:o5",
+        "validation:manual:o1",
+        "validation:manual:o2"
+      ],
+      "photo_ranking": [
+        "validation:manual:o5",
+        "validation:manual:o1",
+        "validation:manual:o2"
+      ],
+      "query": {
+        "query": "Black expressive mini dress with a fitted velvet bodice, sculptural puff sleeves, flared skirt, and dramatic satin bow neckline"
+      }
+    },
+    "FC010": {
+      "filter_text_ranking": [
+        "validation:manual:o5",
+        "validation:manual:o1",
+        "validation:manual:o2"
+      ],
+      "photo_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o2"
+      ],
+      "query": {
+        "query": "Expressive black floor-length dress in crepe, with structured shoulders, long sleeves, a plunging V-neck, sculpted waist, and dramatic draped skirt"
+      }
+    },
+    "FC014": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B"
+      ],
+      "query": {
+        "query": "Navy casual skirt in cotton twill, knee-length A-line silhouette, smooth waistband, clean front and minimal detailing"
+      }
+    },
+    "FC039": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A"
+      ],
+      "query": {
+        "query": "Navy casual trousers with a high-rise waist, relaxed straight legs, smooth front, full length, and softly draping fabric"
+      }
+    },
+    "FC037": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B"
+      ],
+      "query": {
+        "query": "Expressive black T-shirt with a bold white graphic print, relaxed fit, crew neck, short sleeves, and hip-length hem"
+      }
+    },
+    "FC011": {
+      "filter_text_ranking": [
+        "validation:manual:o5",
+        "validation:manual:o1",
+        "validation:manual:o2"
+      ],
+      "photo_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o2"
+      ],
+      "query": {
+        "query": "Black expressive dress with a square neckline, fitted waist, flared above-knee skirt, delicate red floral embroidery, and subtle lace trim"
+      }
+    },
+    "FC040": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_004:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_004:A"
+      ],
+      "query": {
+        "query": "Sporty teal T-shirt in smooth stretch jersey, with a fitted silhouette, crew neckline, short sleeves and hip-length hem"
+      }
+    },
+    "FC032": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "query": {
+        "query": "Blue casual denim skirt, high-waisted A-line midi silhouette, structured cotton, subtle seaming and classic five-pocket styling"
+      }
+    },
+    "FC041": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_004:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_004:A"
+      ],
+      "query": {
+        "query": "Sporty teal T-shirt with short sleeves, crew neckline, regular athletic fit, hip-length hem, and lightweight breathable jersey fabric"
+      }
+    },
+    "FC033": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_222049_865871:batch_023:B"
+      ],
+      "query": {
+        "query": "Blue casual midi skirt in solid cotton twill, high-waisted A-line silhouette, belt loops, and clean front"
+      }
+    },
+    "FC043": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_006:A"
+      ],
+      "query": {
+        "query": "Tan casual trousers in stretch cotton twill, slim tapered fit, flat front, full length, clean minimal detailing"
+      }
+    },
+    "FC044": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_012:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_012:A"
+      ],
+      "query": {
+        "query": "Casual olive green utility vest, relaxed hip-length fit, V-neck, zip front, matte durable fabric, and practical patch pockets"
+      }
+    },
+    "FC036": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B"
+      ],
+      "query": {
+        "query": "Black expressive T-shirt with a bold white abstract graphic, relaxed fit, crew neck, short sleeves, and hip-length cotton jersey"
+      }
+    },
+    "FC042": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_006:B"
+      ],
+      "query": {
+        "query": "Tan casual trousers in cotton twill, straight-leg fit, full length, mid-rise waist, belt loops and clean front"
+      }
+    },
+    "FC047": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261115_015259_003828:batch_014:A"
+      ],
+      "query": {
+        "query": "Navy casual T-shirt, solid cotton jersey, crew neck, short sleeves, relaxed straight fit, hip-length hem, minimal detailing"
+      }
+    },
+    "FC049": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261115_015259_003828:batch_015:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261115_015259_003828:batch_015:B"
+      ],
+      "query": {
+        "query": "Cobalt blue casual T-shirt, plain cotton jersey, relaxed fit, crew neckline, short sleeves and hip-length hem"
+      }
+    },
+    "FC050": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "query": {
+        "query": "Casual teal T-shirt in soft cotton jersey, solid color, relaxed straight fit, crew neckline, short sleeves and hip-length hem"
+      }
+    },
+    "FC007": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o10",
+        "validation:manual:o4",
+        "validation:manual:o1",
+        "validation:manual:o8",
+        "validation:manual:o11",
+        "validation:manual:o5",
+        "validation:manual:o2",
+        "validation:manual:o6",
+        "validation:manual:o7"
+      ],
+      "photo_ranking": [
+        "validation:manual:o10",
+        "validation:manual:o1",
+        "validation:manual:o12",
+        "validation:manual:o11",
+        "validation:manual:o4",
+        "validation:manual:o8",
+        "validation:manual:o2",
+        "validation:manual:o5",
+        "validation:manual:o6",
+        "validation:manual:o7"
+      ],
+      "query": {
+        "query": "Elegant champagne satin midi dress with slender straps, a softly draped neckline, fitted waist and flowing A-line skirt"
+      }
+    },
+    "FC045": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_012:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_012:A"
+      ],
+      "query": {
+        "query": "Casual olive green utility vest, sleeveless cotton twill, V-neck, zip front, straight hip-length fit, multiple flap pockets"
+      }
+    },
+    "FC051": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "query": {
+        "query": "Teal casual T-shirt in soft cotton jersey, with a crew neckline, short sleeves, straight fit and hip-length hem"
+      }
+    },
+    "FC046": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261115_015259_003828:batch_014:A"
+      ],
+      "query": {
+        "query": "Navy casual T-shirt, plain cotton jersey, crew neckline, short sleeves, relaxed straight fit, hip length, minimal detailing"
+      }
+    },
+    "FC052": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_002:A"
+      ],
+      "query": {
+        "query": "Black casual trousers in matte cotton twill, relaxed straight-leg fit, mid-rise waist, full length, clean front and minimal detailing"
+      }
+    },
+    "FC054": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_123348_479882:batch_007:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_123348_479882:batch_007:B"
+      ],
+      "query": {
+        "query": "Teal sporty trousers, lightweight stretch fabric, elastic waistband, relaxed straight legs, ankle length, smooth finish, minimal detailing"
+      }
+    },
+    "FC048": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261115_015259_003828:batch_015:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261115_015259_003828:batch_015:B"
+      ],
+      "query": {
+        "query": "Cobalt blue casual T-shirt, solid cotton jersey, classic crew neck, short sleeves, regular fit and hip-length hem"
+      }
+    },
+    "FC053": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_002:A"
+      ],
+      "query": {
+        "query": "Black casual trousers in matte cotton twill, relaxed straight-leg fit, full length, flat front and minimal detailing"
+      }
+    },
+    "FC055": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_123348_479882:batch_007:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_123348_479882:batch_007:B"
+      ],
+      "query": {
+        "query": "Teal sporty trousers with an elastic waistband, relaxed straight legs, full-length hems and soft, lightweight athletic fabric"
+      }
+    },
+    "VRF168": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_004:A"
+      ],
+      "query": {
+        "query": "Teal athletic T-shirt, solid lightweight jersey, crew neckline, short sleeves, relaxed straight fit, hip-length hem"
+      }
+    },
+    "VRF107": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t3",
+        "validation:manual:t4"
+      ],
+      "query": {
+        "query": "Ivory sophisticated blouse in fluid crepe, relaxed fit, long sleeves, round neckline and a clean hem suitable for tucking"
+      }
+    },
+    "VRF103": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t4"
+      ],
+      "query": {
+        "query": "Ivory elegant blouse in softly draped matte fabric, round neckline, gently gathered long sleeves, buttoned cuffs, and a tuckable hem"
+      }
+    },
+    "VRF110": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_013:B"
+      ],
+      "query": {
+        "query": "Navy casual top in smooth lightweight jersey, with a modest scoop neckline, short sleeves and a slim, tuckable fit"
+      }
+    },
+    "VRF068": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o10",
+        "validation:manual:o11",
+        "validation:manual:o6"
+      ],
+      "photo_ranking": [
+        "validation:manual:o10",
+        "validation:manual:o12",
+        "validation:manual:o11",
+        "validation:manual:o6"
+      ],
+      "query": {
+        "query": "Pink elegant midi dress with a softly draped neckline, sleeveless bodice, defined waist, slim column silhouette, and smooth satin finish"
+      }
+    },
+    "VRF056": {
+      "filter_text_ranking": [
+        "validation:manual:t7",
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:manual:t5",
+        "validation:manual:t6"
+      ],
+      "photo_ranking": [
+        "validation:manual:t5",
+        "validation:manual:t3",
+        "validation:manual:t4",
+        "validation:manual:t7",
+        "validation:manual:t6"
+      ],
+      "query": {
+        "query": "White feminine fitted top in fine ribbed knit, with a scoop neckline, short sleeves, waist-length hem, and minimal detailing"
+      }
+    },
+    "VRF131": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Black minimalist fine-knit top with a fitted silhouette, long sleeves, a simple crew neckline and a hip-length hem for tucking"
+      }
+    },
+    "VRF172": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_006:B"
+      ],
+      "query": {
+        "query": "Casual dark indigo denim trousers, high-rise straight-leg fit, full length, five-pocket construction and minimal detailing"
+      }
+    },
+    "VRF144": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "query": {
+        "query": "Black casual cotton jersey T-shirt, relaxed fit, crew neckline, short sleeves, hip-length hem, solid unprinted design"
+      }
+    },
+    "VRF040": {
+      "filter_text_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o2",
+        "validation:manual:o7"
+      ],
+      "photo_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o7",
+        "validation:manual:o2"
+      ],
+      "query": {
+        "query": "Black tailored evening dress, floor-length, long sleeves, structured shoulders, V-neckline, fitted waist, smooth suiting fabric, streamlined silhouette"
+      }
+    },
+    "VRF158": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_002:A"
+      ],
+      "query": {
+        "query": "Casual olive green trousers in cotton twill, high-rise flat-front waist, relaxed straight legs and ankle-length hems"
+      }
+    },
+    "VRF138": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_222049_865871:batch_026:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_212951_687232:batch_001:B"
+      ],
+      "query": {
+        "query": "Casual black cotton twill midi skirt, high-waisted A-line silhouette with belt loops, front pockets and subtle topstitching"
+      }
+    },
+    "VRF155": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_026:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_212951_687232:batch_001:A"
+      ],
+      "query": {
+        "query": "Navy workwear trousers, straight-leg full-length fit, sturdy cotton twill, mid-rise waist, belt loops and practical front pockets"
+      }
+    },
+    "VRF029": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o10",
+        "validation:manual:o4",
+        "validation:manual:o1",
+        "validation:manual:o8",
+        "validation:manual:o11",
+        "validation:manual:o5",
+        "validation:manual:o2",
+        "validation:manual:o6",
+        "validation:manual:o7"
+      ],
+      "photo_ranking": [
+        "validation:manual:o10",
+        "validation:manual:o12",
+        "validation:manual:o1",
+        "validation:manual:o11",
+        "validation:manual:o5",
+        "validation:manual:o4",
+        "validation:manual:o8",
+        "validation:manual:o6",
+        "validation:manual:o2",
+        "validation:manual:o7"
+      ],
+      "query": {
+        "query": "Dusty blue romantic dress with a fitted bodice, square neckline, short puff sleeves, and softly flared knee-length satin skirt"
+      }
+    },
+    "VRF057": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:manual:t3",
+        "validation:manual:t4",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B"
+      ],
+      "query": {
+        "query": "Expressive ivory top with a fitted waist-length silhouette, asymmetric neckline, gathered mesh, sheer long sleeves and subtle gold shimmer"
+      }
+    },
+    "VRF003": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "query": {
+        "query": "Navy nautical skirt, knee-length A-line silhouette, fitted waistband, smooth woven fabric, clean front, and minimal detailing"
+      }
+    },
+    "VRF038": {
+      "filter_text_ranking": [
+        "validation:manual:t7",
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:manual:t5",
+        "validation:manual:t6"
+      ],
+      "photo_ranking": [
+        "validation:manual:t5",
+        "validation:manual:t7",
+        "validation:manual:t6",
+        "validation:manual:t3",
+        "validation:manual:t4"
+      ],
+      "query": {
+        "query": "White elegant sleeveless top with a softly squared neckline, fitted silhouette and smooth satin finish, suitable for layering under a blazer"
+      }
+    },
+    "VRF019": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_222049_865871:batch_026:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_212951_687232:batch_001:B"
+      ],
+      "query": {
+        "query": "Casual olive green midi skirt, high-waisted A-line silhouette, cotton-linen blend, softly draped fabric and simple waistband"
+      }
+    },
+    "VRF061": {
+      "filter_text_ranking": [
+        "validation:manual:t7",
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:manual:t5",
+        "validation:manual:t6"
+      ],
+      "photo_ranking": [
+        "validation:manual:t5",
+        "validation:manual:t7",
+        "validation:manual:t6",
+        "validation:manual:t3",
+        "validation:manual:t4"
+      ],
+      "query": {
+        "query": "White fitted fine-knit cardigan top with a V-neck, button front, long sleeves, ribbed trim, and hip-length hem"
+      }
+    },
+    "VRF074": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o10",
+        "validation:manual:o4",
+        "validation:manual:o1",
+        "validation:manual:o8",
+        "validation:manual:o11",
+        "validation:manual:o5",
+        "validation:manual:o2",
+        "validation:manual:o6",
+        "validation:manual:o7"
+      ],
+      "photo_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o10",
+        "validation:manual:o4",
+        "validation:manual:o11",
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o6",
+        "validation:manual:o2",
+        "validation:manual:o7",
+        "validation:manual:o8"
+      ],
+      "query": {
+        "query": "Romantic pastel lavender dress with a softly draped sweetheart neckline, fitted waist, and flowy chiffon mini skirt"
+      }
+    },
+    "VRF062": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t3",
+        "validation:manual:t4",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Expressive burgundy fitted top with a lace-trimmed sweetheart neckline, ruched bodice, long flared sleeves, and hip-skimming hem"
+      }
+    },
+    "VRF099": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Black equestrian-style top, fitted long-sleeve polo shirt with a structured collar, button placket, smooth stretch fabric and tuck-in length"
+      }
+    },
+    "VRF127": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Black casual edgy top, fitted silhouette, long sleeves, crew neckline, smooth stretch knit and waist-length hem"
+      }
+    },
+    "VRF149": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_006:A"
+      ],
+      "query": {
+        "query": "Black casual short-sleeve T-shirt, relaxed straight fit, crew neckline, hip-length hem, smooth cotton jersey, solid color with minimal detailing"
+      }
+    },
+    "VRF083": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Black Western-style top, slim-fit cotton shirt with pointed collar, long sleeves, snap-front closure and subtle shoulder yoke"
+      }
+    },
+    "VRF087": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Black minimalist tailored top, pointed collar, button front, long sleeves, smooth fabric, relaxed fit and tuckable hem"
+      }
+    },
+    "VRF132": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:manual:t3",
+        "validation:manual:t4",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Expressive emerald green satin blouse with softly puffed long sleeves, a gathered neckline, and a streamlined waist-length silhouette"
+      }
+    },
+    "VRF150": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:manual:t6"
+      ],
+      "query": {
+        "query": "Expressive red and black color-block top, relaxed boxy fit, hip length, short sleeves, crew neckline, substantial cotton jersey"
+      }
+    },
+    "VRF145": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t6",
+        "validation:manual:t4",
+        "validation:manual:t3"
+      ],
+      "query": {
+        "query": "Expressive cobalt blue top, relaxed-fit cotton jersey T-shirt with crew neckline, short sleeves and a bold black-and-white abstract chest graphic"
+      }
+    },
+    "VRF128": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Expressive black fitted top with sheer mesh long sleeves, an opaque bodice, asymmetric neckline and silver grommet accents"
+      }
+    },
+    "VRF160": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_007:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_006:B"
+      ],
+      "query": {
+        "query": "Navy tailored trousers with a high-rise waist, flat front, fluid straight legs, full-length hems and smooth crepe fabric"
+      }
+    },
+    "VRF166": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:A"
+      ],
+      "query": {
+        "query": "Teal ballet-inspired top with a fitted silhouette, scoop neckline, short sleeves, smooth stretch jersey, and hip-length hem"
+      }
+    },
+    "VRF046": {
+      "filter_text_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o2",
+        "validation:manual:o7"
+      ],
+      "photo_ranking": [
+        "validation:manual:o5",
+        "validation:manual:o1",
+        "validation:manual:o2",
+        "validation:manual:o7"
+      ],
+      "query": {
+        "query": "Black romantic dress with a fitted bodice, square neckline, wide shoulder straps, softly flared short skirt, and delicate lace trim"
+      }
+    },
+    "VRF033": {
+      "filter_text_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o2",
+        "validation:manual:o7"
+      ],
+      "photo_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o5",
+        "validation:manual:o2",
+        "validation:manual:o7"
+      ],
+      "query": {
+        "query": "Black elegant dress with a strapless neckline, fitted bodice and flowing midi-length chiffon skirt, finished with subtle gathers"
+      }
+    },
+    "VRF170": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:A"
+      ],
+      "query": {
+        "query": "Teal athletic top, short sleeves, crew neckline, relaxed straight fit, hip length, lightweight breathable jersey, minimal detailing"
+      }
+    },
+    "VRF154": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_007:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_123348_479882:batch_002:A"
+      ],
+      "query": {
+        "query": "Olive green workwear trousers, relaxed straight-leg fit, full length, sturdy cotton twill, mid-rise waistband, belt loops and practical pockets"
+      }
+    },
+    "VRF053": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:manual:t3",
+        "validation:manual:t4",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "query": {
+        "query": "Expressive ivory blouse with a fitted waist, square neckline, sheer puff sleeves, delicate ruffle trim and lightweight chiffon"
+      }
+    },
+    "VRF072": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o10",
+        "validation:manual:o11",
+        "validation:manual:o6"
+      ],
+      "photo_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o10",
+        "validation:manual:o11",
+        "validation:manual:o6"
+      ],
+      "query": {
+        "query": "Pink romantic mini dress with a strapless sweetheart neckline, softly ruched bodice, fitted waist, and airy chiffon A-line skirt"
+      }
+    },
+    "VRF208": {
+      "filter_text_ranking": [
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:A"
+      ],
+      "query": {
+        "query": "Teal casual top in soft cotton jersey, with a relaxed fit, crew neckline, short sleeves, and clean hip-length hem"
+      }
+    },
+    "VRF098": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_002:A"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A"
+      ],
+      "query": {
+        "query": "Black casual long-sleeve polo top in lightweight cotton jersey, slim fit, soft collar, short button placket, and tuckable hem"
+      }
+    },
+    "VRF185": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A"
+      ],
+      "query": {
+        "query": "Navy casual top, solid cotton jersey T-shirt with a crew neckline, short sleeves, relaxed straight fit and hip-length hem"
+      }
+    },
+    "VRF211": {
+      "filter_text_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_123348_479882:batch_001:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_004:A"
+      ],
+      "query": {
+        "query": "Teal casual T-shirt with a classic crew neckline, short sleeves, straight fit, hip-length hem, and solid cotton jersey"
+      }
+    },
+    "VRF102": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_011:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:manual:t3",
+        "validation:manual:t4"
+      ],
+      "query": {
+        "query": "Expressive emerald green blouse with a softly draped neckline, puffed long sleeves, gathered cuffs, and a fluid tuckable silhouette"
+      }
+    },
+    "VRF114": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261115_015259_003828:batch_014:A"
+      ],
+      "query": {
+        "query": "Navy casual tunic top, relaxed straight fit, thigh-length hem, subtle split neckline, slim long sleeves, lightweight textured cotton"
+      }
+    },
+    "VRF067": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o2",
+        "validation:manual:o6",
+        "validation:manual:o8",
+        "validation:manual:o11",
+        "validation:manual:o7",
+        "validation:manual:o1",
+        "validation:manual:o10",
+        "validation:manual:o4",
+        "validation:manual:o5"
+      ],
+      "photo_ranking": [
+        "validation:manual:o1",
+        "validation:manual:o4",
+        "validation:manual:o10",
+        "validation:manual:o8",
+        "validation:manual:o2",
+        "validation:manual:o11",
+        "validation:manual:o5",
+        "validation:manual:o7",
+        "validation:manual:o12",
+        "validation:manual:o6"
+      ],
+      "query": {
+        "query": "Black elegant evening gown with slender straps, a softly draped V-neckline, fitted waist, fluid satin fabric and ankle-length column skirt"
+      }
+    },
+    "VRF157": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_212951_687232:batch_001:A"
+      ],
+      "query": {
+        "query": "Olive green workwear trousers, relaxed straight-leg fit, durable cotton twill, full length, mid-rise waist, belt loops and practical front pockets"
+      }
+    },
+    "VRF163": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "query": {
+        "query": "Navy tailored trousers with a high waist, flat front, straight legs, ankle-grazing length, and smooth woven fabric"
+      }
+    },
+    "VRF093": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:manual:t1",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:manual:t5",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:manual:t3",
+        "validation:manual:t4",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:manual:t1",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:manual:t2",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_001:A"
+      ],
+      "query": {
+        "query": "Light blue minimalist top, relaxed button-front blouse with a pointed collar, long sleeves, button cuffs and hip-length hem"
+      }
+    },
+    "VRF077": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o2",
+        "validation:manual:o6",
+        "validation:manual:o8",
+        "validation:manual:o11",
+        "validation:manual:o7",
+        "validation:manual:o1",
+        "validation:manual:o10",
+        "validation:manual:o4",
+        "validation:manual:o5"
+      ],
+      "photo_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o10",
+        "validation:manual:o11",
+        "validation:manual:o6",
+        "validation:manual:o4",
+        "validation:manual:o5",
+        "validation:manual:o1",
+        "validation:manual:o2",
+        "validation:manual:o8",
+        "validation:manual:o7"
+      ],
+      "query": {
+        "query": "Soft blush satin cocktail mini dress with a fitted bodice, delicate spaghetti straps, sweetheart neckline, and softly flared skirt"
+      }
+    },
+    "VRF195": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:manual:t1",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:manual:t3",
+        "validation:manual:t4",
+        "validation:manual:t2",
+        "validation:manual:t1",
+        "validation:manual:t7",
+        "validation:manual:t5",
+        "validation:manual:t6"
+      ],
+      "query": {
+        "query": "Black casual cotton T-shirt, relaxed straight fit, crew neck, short sleeves, hip length, solid color with no graphics"
+      }
+    },
+    "VRF091": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:manual:t1",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:manual:t1",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:manual:t5",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:manual:t4",
+        "validation:manual:t3",
+        "validation:manual:t6",
+        "validation:manual:t2",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B"
+      ],
+      "query": {
+        "query": "Men's muted olive heritage cardigan top, midweight textured wool knit, straight fit, button front, ribbed cuffs and hem"
+      }
+    },
+    "VRF063": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:manual:t1",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:manual:t1",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:manual:t2",
+        "validation:manual:t5",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:manual:t7",
+        "validation:manual:t3",
+        "validation:manual:t4",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261115_015259_003828:batch_004:B"
+      ],
+      "query": {
+        "query": "Dusty rose feminine cardigan top, fitted ribbed knit, V-neck, delicate button front, long sleeves and hip-length hem"
+      }
+    },
+    "VRF179": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "query": {
+        "query": "Black athletic cycling pants, slim tapered fit, ankle length, stretch technical fabric, clean waistband and minimal seams"
+      }
+    },
+    "VRF210": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:manual:t1",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:manual:t4",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:manual:t1",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t5",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:manual:t7",
+        "validation:manual:t6"
+      ],
+      "query": {
+        "query": "Relaxed olive green casual top, soft cotton, round neckline, short sleeves, solid color, hip-length hem"
+      }
+    },
+    "VRF203": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:manual:t1",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:manual:t7",
+        "validation:manual:t6",
+        "validation:manual:t3",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:manual:t4",
+        "validation:manual:t5",
+        "validation:manual:t2",
+        "validation:manual:t1"
+      ],
+      "query": {
+        "query": "Men's casual white cotton jersey T-shirt, relaxed straight fit, crew neckline, short sleeves, hip-length hem, small navy surf-inspired chest graphic"
+      }
+    },
+    "VRF175": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_212951_687232:batch_001:A"
+      ],
+      "query": {
+        "query": "Dark indigo Western-style jeans, high-rise waist, fitted through the hips, full-length bootcut legs, classic five-pocket construction and subtle contrast stitching"
+      }
+    },
+    "VRF221": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "query": {
+        "query": "Black minimalist tailored trousers, relaxed straight-leg fit, full length, mid-rise waist, flat front, smooth woven fabric and subtle pressed creases"
+      }
+    },
+    "VRF181": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:manual:t1",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:manual:t7",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:manual:t6",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:manual:t5",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:manual:t1",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_011:A"
+      ],
+      "query": {
+        "query": "Men's olive green outdoor utility vest top, sleeveless relaxed fit, V-neck, front zip, hip length, matte fabric and functional pockets"
+      }
+    },
+    "VRF071": {
+      "filter_text_ranking": [
+        "validation:manual:o12",
+        "validation:manual:o2",
+        "validation:manual:o6",
+        "validation:manual:o8",
+        "validation:manual:o11",
+        "validation:manual:o7",
+        "validation:manual:o1",
+        "validation:manual:o10",
+        "validation:manual:o4",
+        "validation:manual:o5"
+      ],
+      "photo_ranking": [
+        "validation:manual:o10",
+        "validation:manual:o12",
+        "validation:manual:o11",
+        "validation:manual:o1",
+        "validation:manual:o4",
+        "validation:manual:o8",
+        "validation:manual:o2",
+        "validation:manual:o6",
+        "validation:manual:o5",
+        "validation:manual:o7"
+      ],
+      "query": {
+        "query": "Blush pink elegant midi dress with slender shoulder straps, a softly draped neckline, fitted waist, smooth satin fabric, and streamlined skirt"
+      }
+    },
+    "VRF229": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "query": {
+        "query": "Black athletic pants with a high elastic waistband, tapered ankle-length legs, smooth stretch fabric, and minimal detailing"
+      }
+    },
+    "VRF220": {
+      "filter_text_ranking": [
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_015259_003828:batch_003:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_023:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_212951_687232:batch_001:B"
+      ],
+      "query": {
+        "query": "Casual dark indigo denim jeans, straight-leg relaxed fit, mid-rise waist, full length, clean un distressed finish and classic five-pocket construction"
+      }
+    },
+    "VRF183": {
+      "filter_text_ranking": [
+        "validation:manual:t4",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:manual:t7",
+        "validation:20261114_222049_865871:batch_011:A",
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:manual:t3",
+        "validation:manual:t2",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:manual:t1",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261115_015259_003828:batch_014:B"
+      ],
+      "photo_ranking": [
+        "validation:20261114_222049_865871:batch_014:B",
+        "validation:20261115_015259_003828:batch_012:B",
+        "validation:20261115_015259_003828:batch_012:A",
+        "validation:20261114_222049_865871:batch_014:A",
+        "validation:20261114_222049_865871:batch_002:B",
+        "validation:20261114_222049_865871:batch_006:B",
+        "validation:20261114_222049_865871:batch_006:A",
+        "validation:20261114_222049_865871:batch_013:B",
+        "validation:20261114_222049_865871:batch_013:A",
+        "validation:20261115_123348_479882:batch_001:B",
+        "validation:20261114_222049_865871:batch_003:B",
+        "validation:20261114_222049_865871:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:B",
+        "validation:20261114_222049_865871:batch_003:A",
+        "validation:20261114_212951_687232:batch_002:A",
+        "validation:20261114_222049_865871:batch_015:A",
+        "validation:20261114_212951_687232:batch_002:B",
+        "validation:20261115_015259_003828:batch_014:B",
+        "validation:20261115_015259_003828:batch_015:A",
+        "validation:20261115_015259_003828:batch_001:A",
+        "validation:manual:t7",
+        "validation:20261115_015259_003828:batch_001:B",
+        "validation:20261115_123348_479882:batch_001:A",
+        "validation:20261115_015259_003828:batch_014:A",
+        "validation:manual:t4",
+        "validation:manual:t1",
+        "validation:20261114_222049_865871:batch_011:B",
+        "validation:manual:t5",
+        "validation:20261115_015259_003828:batch_004:B",
+        "validation:manual:t2",
+        "validation:manual:t3",
+        "validation:20261115_015259_003828:batch_015:B",
+        "validation:manual:t6",
+        "validation:20261115_015259_003828:batch_004:A",
+        "validation:20261114_222049_865871:batch_011:A"
+      ],
+      "query": {
+        "query": "Men’s charcoal gray casual knit vest, sleeveless V-neck, full-zip front, relaxed straight fit and hip-length hem"
+      }
+    },
+    "VRF227": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "query": {
+        "query": "Black casual athletic jogger pants, lightweight stretch fabric, relaxed straight legs, elastic waistband and gently tapered full-length cuffs"
+      }
+    },
+    "VRF225": {
+      "filter_text_ranking": [
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "photo_ranking": [
+        "validation:20261115_123348_479882:batch_002:B",
+        "validation:20261115_123348_479882:batch_002:A",
+        "validation:20261115_015259_003828:batch_003:B",
+        "validation:20261115_015259_003828:batch_003:A",
+        "validation:20261115_123348_479882:batch_007:A",
+        "validation:20261115_015259_003828:batch_006:B",
+        "validation:20261115_015259_003828:batch_006:A",
+        "validation:20261115_123348_479882:batch_007:B",
+        "validation:20261114_222049_865871:batch_026:B",
+        "validation:20261114_222049_865871:batch_026:A",
+        "validation:20261114_212951_687232:batch_001:B",
+        "validation:20261114_222049_865871:batch_023:B",
+        "validation:20261114_212951_687232:batch_001:A",
+        "validation:20261114_222049_865871:batch_023:A"
+      ],
+      "query": {
+        "query": "Charcoal casual tailored trousers, relaxed straight-leg fit, full length, flat front, smooth woven fabric and minimal detailing"
+      }
+    }
+  },
+  "decisions": {
+    "v3": {
+      "FC003": {
+        "sku": "validation:manual:t3"
+      },
+      "FC001": {
+        "sku": "validation:manual:t1"
+      },
+      "FC018": {
+        "sku": "validation:20261114_222049_865871:batch_002:B"
+      },
+      "FC012": {
+        "sku": "validation:manual:o10"
+      },
+      "FC016": {
+        "sku": "validation:20261114_212951_687232:batch_002:B"
+      },
+      "FC019": {
+        "sku": "validation:20261114_222049_865871:batch_002:B"
+      },
+      "FC004": {
+        "sku": "validation:manual:t5"
+      },
+      "FC021": {
+        "sku": "validation:20261114_222049_865871:batch_003:B"
+      },
+      "FC013": {
+        "sku": "validation:manual:o12"
+      },
+      "FC017": {
+        "sku": "validation:20261114_212951_687232:batch_002:B"
+      },
+      "FC008": {
+        "sku": "validation:manual:o4"
+      },
+      "FC015": {
+        "sku": "validation:20261114_222049_865871:batch_026:B"
+      },
+      "FC002": {
+        "sku": "validation:manual:t3"
+      },
+      "FC024": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "FC025": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "FC023": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "FC022": {
+        "sku": "validation:20261114_222049_865871:batch_006:A"
+      },
+      "FC006": {
+        "sku": "validation:manual:o1"
+      },
+      "FC026": {
+        "sku": "validation:20261114_222049_865871:batch_013:A"
+      },
+      "FC031": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "FC029": {
+        "sku": "validation:20261114_222049_865871:batch_014:B"
+      },
+      "FC038": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "FC028": {
+        "sku": "validation:20261114_222049_865871:batch_014:B"
+      },
+      "FC030": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "FC005": {
+        "sku": "validation:manual:o5"
+      },
+      "FC010": {
+        "sku": "validation:manual:o1"
+      },
+      "FC014": {
+        "sku": "validation:20261114_212951_687232:batch_001:A"
+      },
+      "FC039": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "FC037": {
+        "sku": "validation:20261115_015259_003828:batch_001:B"
+      },
+      "FC011": {
+        "sku": "validation:manual:o5"
+      },
+      "FC040": {
+        "sku": "validation:20261115_015259_003828:batch_004:A"
+      },
+      "FC032": {
+        "sku": "validation:20261114_222049_865871:batch_023:B"
+      },
+      "FC041": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "FC033": {
+        "sku": "validation:20261114_222049_865871:batch_023:B"
+      },
+      "FC043": {
+        "sku": "validation:20261115_015259_003828:batch_006:B"
+      },
+      "FC044": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "FC036": {
+        "sku": "validation:20261115_015259_003828:batch_001:A"
+      },
+      "FC042": {
+        "sku": "validation:20261115_015259_003828:batch_006:A"
+      },
+      "FC047": {
+        "sku": "validation:20261115_015259_003828:batch_014:B"
+      },
+      "FC049": {
+        "sku": "validation:20261115_015259_003828:batch_015:B"
+      },
+      "FC050": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "FC007": {
+        "sku": "validation:manual:o10"
+      },
+      "FC045": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "FC051": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "FC046": {
+        "sku": "validation:20261115_015259_003828:batch_014:A"
+      },
+      "FC052": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      },
+      "FC054": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "FC048": {
+        "sku": "validation:20261115_015259_003828:batch_015:A"
+      },
+      "FC053": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      },
+      "FC055": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "VRF168": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "VRF107": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "VRF103": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "VRF110": {
+        "sku": "validation:20261114_222049_865871:batch_013:A"
+      },
+      "VRF068": {
+        "sku": "validation:manual:o10"
+      },
+      "VRF056": {
+        "sku": "validation:manual:t5"
+      },
+      "VRF131": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "VRF172": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      },
+      "VRF144": {
+        "sku": "validation:20261114_222049_865871:batch_002:B"
+      },
+      "VRF040": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF158": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF138": {
+        "sku": "validation:20261114_222049_865871:batch_023:B"
+      },
+      "VRF155": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF029": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF057": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "VRF003": {
+        "sku": "validation:20261114_212951_687232:batch_001:A"
+      },
+      "VRF038": {
+        "sku": "validation:manual:t7"
+      },
+      "VRF019": {
+        "sku": "validation:20261114_222049_865871:batch_026:B"
+      },
+      "VRF061": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF074": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF062": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF099": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "VRF127": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "VRF149": {
+        "sku": "validation:20261114_222049_865871:batch_002:B"
+      },
+      "VRF083": {
+        "sku": "validation:20261114_222049_865871:batch_006:A"
+      },
+      "VRF087": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "VRF132": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "VRF150": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "VRF145": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "VRF128": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "VRF160": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF166": {
+        "sku": "validation:20261115_015259_003828:batch_004:A"
+      },
+      "VRF046": {
+        "sku": "validation:manual:o5"
+      },
+      "VRF033": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF170": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "VRF154": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF053": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF072": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF208": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "VRF098": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "VRF185": {
+        "sku": "validation:20261115_015259_003828:batch_014:A"
+      },
+      "VRF211": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "VRF102": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "VRF114": {
+        "sku": "validation:20261114_222049_865871:batch_013:B"
+      },
+      "VRF067": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF157": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF163": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF093": {
+        "sku": "validation:manual:t7"
+      },
+      "VRF077": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF195": {
+        "sku": "validation:20261115_123348_479882:batch_001:B"
+      },
+      "VRF091": {
+        "sku": "validation:20261114_222049_865871:batch_003:B"
+      },
+      "VRF063": {
+        "sku": "validation:manual:t1"
+      },
+      "VRF179": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "VRF210": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "VRF203": {
+        "sku": "validation:20261115_015259_003828:batch_015:B"
+      },
+      "VRF175": {
+        "sku": "validation:20261114_222049_865871:batch_023:B"
+      },
+      "VRF221": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF181": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "VRF071": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF229": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "VRF220": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF183": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "VRF227": {
+        "sku": "validation:20261115_123348_479882:batch_007:B"
+      },
+      "VRF225": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      }
+    },
+    "finished_looks": {
+      "FC016": {
+        "sku": "validation:20261114_212951_687232:batch_002:A"
+      },
+      "FC018": {
+        "sku": "validation:20261114_222049_865871:batch_002:A"
+      },
+      "FC003": {
+        "sku": "validation:manual:t3"
+      },
+      "FC012": {
+        "sku": "validation:manual:o10"
+      },
+      "FC008": {
+        "sku": "validation:manual:o4"
+      },
+      "FC001": {
+        "sku": "validation:manual:t1"
+      },
+      "FC019": {
+        "sku": "validation:20261114_222049_865871:batch_002:B"
+      },
+      "FC013": {
+        "sku": "validation:manual:o12"
+      },
+      "FC024": {
+        "sku": "validation:20261114_222049_865871:batch_011:A"
+      },
+      "FC021": {
+        "sku": "validation:20261114_222049_865871:batch_003:A"
+      },
+      "FC025": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "FC017": {
+        "sku": "validation:20261114_212951_687232:batch_002:B"
+      },
+      "FC004": {
+        "sku": "validation:manual:t5"
+      },
+      "FC015": {
+        "sku": "validation:20261114_212951_687232:batch_001:B"
+      },
+      "FC002": {
+        "sku": "validation:manual:t3"
+      },
+      "FC023": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "FC022": {
+        "sku": "validation:20261114_222049_865871:batch_006:A"
+      },
+      "FC006": {
+        "sku": "validation:manual:o1"
+      },
+      "FC026": {
+        "sku": "validation:20261114_222049_865871:batch_013:A"
+      },
+      "FC031": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "FC029": {
+        "sku": "validation:20261114_222049_865871:batch_014:B"
+      },
+      "FC038": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "FC028": {
+        "sku": "validation:20261114_222049_865871:batch_014:A"
+      },
+      "FC030": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "FC005": {
+        "sku": "validation:manual:o5"
+      },
+      "FC010": {
+        "sku": "validation:manual:o1"
+      },
+      "FC039": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "FC040": {
+        "sku": "validation:20261115_015259_003828:batch_004:A"
+      },
+      "FC037": {
+        "sku": "validation:20261115_015259_003828:batch_001:B"
+      },
+      "FC014": {
+        "sku": "validation:20261114_212951_687232:batch_001:A"
+      },
+      "FC032": {
+        "sku": "validation:20261114_222049_865871:batch_023:A"
+      },
+      "FC041": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "FC011": {
+        "sku": "validation:manual:o1"
+      },
+      "FC043": {
+        "sku": "validation:20261115_015259_003828:batch_006:B"
+      },
+      "FC036": {
+        "sku": "validation:20261115_015259_003828:batch_001:A"
+      },
+      "FC033": {
+        "sku": "validation:20261114_222049_865871:batch_023:B"
+      },
+      "FC044": {
+        "sku": "validation:20261115_015259_003828:batch_012:A"
+      },
+      "FC042": {
+        "sku": "validation:20261115_015259_003828:batch_006:A"
+      },
+      "FC047": {
+        "sku": "validation:20261115_015259_003828:batch_014:B"
+      },
+      "FC049": {
+        "sku": "validation:20261115_015259_003828:batch_015:B"
+      },
+      "FC051": {
+        "sku": "validation:20261115_123348_479882:batch_001:B"
+      },
+      "FC046": {
+        "sku": "validation:20261115_015259_003828:batch_014:A"
+      },
+      "FC050": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "FC045": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "FC052": {
+        "sku": "validation:20261115_123348_479882:batch_002:A"
+      },
+      "FC054": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "FC053": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      },
+      "FC048": {
+        "sku": "validation:20261115_015259_003828:batch_015:A"
+      },
+      "FC055": {
+        "sku": "validation:20261115_123348_479882:batch_007:B"
+      },
+      "FC007": {
+        "sku": "validation:manual:o10"
+      },
+      "VRF168": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "VRF107": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "VRF110": {
+        "sku": "validation:20261115_015259_003828:batch_014:B"
+      },
+      "VRF068": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF056": {
+        "sku": "validation:manual:t5"
+      },
+      "VRF131": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "VRF144": {
+        "sku": "validation:20261115_015259_003828:batch_001:A"
+      },
+      "VRF103": {
+        "sku": "validation:20261114_222049_865871:batch_011:A"
+      },
+      "VRF172": {
+        "sku": "validation:20261115_015259_003828:batch_006:A"
+      },
+      "VRF040": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF158": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF155": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF138": {
+        "sku": "validation:20261114_212951_687232:batch_001:A"
+      },
+      "VRF029": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF003": {
+        "sku": "validation:20261114_212951_687232:batch_001:A"
+      },
+      "VRF061": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF019": {
+        "sku": "validation:20261114_222049_865871:batch_026:B"
+      },
+      "VRF038": {
+        "sku": "validation:manual:t6"
+      },
+      "VRF057": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF074": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF099": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "VRF062": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF127": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "VRF083": {
+        "sku": "validation:20261114_222049_865871:batch_006:A"
+      },
+      "VRF149": {
+        "sku": "validation:20261115_015259_003828:batch_001:B"
+      },
+      "VRF087": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "VRF145": {
+        "sku": "validation:20261115_015259_003828:batch_001:A"
+      },
+      "VRF160": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF132": {
+        "sku": "validation:20261114_222049_865871:batch_011:A"
+      },
+      "VRF150": {
+        "sku": "validation:20261115_015259_003828:batch_001:B"
+      },
+      "VRF128": {
+        "sku": "validation:manual:t4"
+      },
+      "VRF166": {
+        "sku": "validation:20261115_015259_003828:batch_004:A"
+      },
+      "VRF046": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF154": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF033": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF170": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "VRF053": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF185": {
+        "sku": "validation:20261115_015259_003828:batch_014:A"
+      },
+      "VRF072": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF098": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "VRF211": {
+        "sku": "validation:20261115_015259_003828:batch_004:A"
+      },
+      "VRF157": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF102": {
+        "sku": "validation:20261114_222049_865871:batch_011:A"
+      },
+      "VRF114": {
+        "sku": "validation:20261114_222049_865871:batch_013:A"
+      },
+      "VRF208": {
+        "sku": "validation:20261114_222049_865871:batch_014:A"
+      },
+      "VRF093": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "VRF067": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF195": {
+        "sku": "validation:20261115_015259_003828:batch_014:B"
+      },
+      "VRF163": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF077": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF210": {
+        "sku": "validation:20261115_015259_003828:batch_004:A"
+      },
+      "VRF179": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "VRF203": {
+        "sku": "validation:20261115_015259_003828:batch_015:B"
+      },
+      "VRF063": {
+        "sku": "validation:manual:t1"
+      },
+      "VRF091": {
+        "sku": "validation:20261114_222049_865871:batch_003:A"
+      },
+      "VRF221": {
+        "sku": "validation:20261115_123348_479882:batch_002:A"
+      },
+      "VRF071": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF183": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "VRF181": {
+        "sku": "validation:20261115_015259_003828:batch_012:A"
+      },
+      "VRF220": {
+        "sku": "validation:20261115_123348_479882:batch_002:A"
+      },
+      "VRF229": {
+        "sku": "validation:20261115_123348_479882:batch_007:B"
+      },
+      "VRF227": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "VRF175": {
+        "sku": "validation:20261114_222049_865871:batch_023:A"
+      },
+      "VRF225": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      }
+    },
+    "style_rules": {
+      "FC017": {
+        "sku": "validation:20261114_212951_687232:batch_002:B"
+      },
+      "FC003": {
+        "sku": "validation:manual:t3"
+      },
+      "FC021": {
+        "sku": "validation:20261114_222049_865871:batch_003:B"
+      },
+      "FC004": {
+        "sku": "validation:manual:t5"
+      },
+      "FC012": {
+        "sku": "validation:manual:o10"
+      },
+      "FC001": {
+        "sku": "validation:manual:t1"
+      },
+      "FC016": {
+        "sku": "validation:20261114_212951_687232:batch_002:A"
+      },
+      "FC019": {
+        "sku": "validation:20261114_222049_865871:batch_002:B"
+      },
+      "FC018": {
+        "sku": "validation:20261114_222049_865871:batch_002:A"
+      },
+      "FC008": {
+        "sku": "validation:manual:o4"
+      },
+      "FC002": {
+        "sku": "validation:manual:t3"
+      },
+      "FC024": {
+        "sku": "validation:20261114_222049_865871:batch_011:A"
+      },
+      "FC013": {
+        "sku": "validation:manual:o12"
+      },
+      "FC023": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "FC025": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "FC022": {
+        "sku": "validation:20261114_222049_865871:batch_006:A"
+      },
+      "FC015": {
+        "sku": "validation:20261114_212951_687232:batch_001:A"
+      },
+      "FC026": {
+        "sku": "validation:20261114_222049_865871:batch_013:A"
+      },
+      "FC029": {
+        "sku": "validation:20261114_222049_865871:batch_014:B"
+      },
+      "FC031": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "FC038": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "FC030": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "FC028": {
+        "sku": "validation:20261114_222049_865871:batch_014:A"
+      },
+      "FC006": {
+        "sku": "validation:manual:o1"
+      },
+      "FC039": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "FC010": {
+        "sku": "validation:manual:o1"
+      },
+      "FC040": {
+        "sku": "validation:20261115_015259_003828:batch_004:A"
+      },
+      "FC037": {
+        "sku": "validation:20261115_015259_003828:batch_001:B"
+      },
+      "FC041": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "FC014": {
+        "sku": "validation:20261114_212951_687232:batch_001:A"
+      },
+      "FC005": {
+        "sku": "validation:manual:o5"
+      },
+      "FC043": {
+        "sku": "validation:20261115_015259_003828:batch_006:B"
+      },
+      "FC032": {
+        "sku": "validation:20261114_222049_865871:batch_023:A"
+      },
+      "FC033": {
+        "sku": "validation:20261114_222049_865871:batch_023:B"
+      },
+      "FC036": {
+        "sku": "validation:20261115_015259_003828:batch_001:A"
+      },
+      "FC042": {
+        "sku": "validation:20261115_015259_003828:batch_006:A"
+      },
+      "FC047": {
+        "sku": "validation:20261115_015259_003828:batch_014:B"
+      },
+      "FC044": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "FC011": {
+        "sku": "validation:manual:o1"
+      },
+      "FC049": {
+        "sku": "validation:20261115_015259_003828:batch_015:B"
+      },
+      "FC050": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "FC051": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "FC045": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "FC054": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "FC052": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      },
+      "FC046": {
+        "sku": "validation:20261115_015259_003828:batch_014:A"
+      },
+      "FC048": {
+        "sku": "validation:20261115_015259_003828:batch_015:A"
+      },
+      "FC053": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      },
+      "FC007": {
+        "sku": "validation:manual:o10"
+      },
+      "FC055": {
+        "sku": "validation:20261115_123348_479882:batch_007:B"
+      },
+      "VRF168": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "VRF107": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "VRF110": {
+        "sku": "validation:20261114_222049_865871:batch_013:A"
+      },
+      "VRF068": {
+        "sku": "validation:manual:o10"
+      },
+      "VRF103": {
+        "sku": "validation:20261114_222049_865871:batch_011:B"
+      },
+      "VRF131": {
+        "sku": "validation:20261114_222049_865871:batch_015:B"
+      },
+      "VRF056": {
+        "sku": "validation:manual:t5"
+      },
+      "VRF144": {
+        "sku": "validation:20261114_222049_865871:batch_002:B"
+      },
+      "VRF040": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF158": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF172": {
+        "sku": "validation:20261115_015259_003828:batch_006:A"
+      },
+      "VRF155": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF003": {
+        "sku": "validation:20261114_212951_687232:batch_001:A"
+      },
+      "VRF138": {
+        "sku": "validation:20261114_222049_865871:batch_023:B"
+      },
+      "VRF038": {
+        "sku": "validation:manual:t7"
+      },
+      "VRF019": {
+        "sku": "validation:20261114_222049_865871:batch_026:B"
+      },
+      "VRF029": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF057": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF074": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF061": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF062": {
+        "sku": "validation:manual:t3"
+      },
+      "VRF083": {
+        "sku": "validation:20261114_222049_865871:batch_006:A"
+      },
+      "VRF099": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "VRF127": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "VRF149": {
+        "sku": "validation:20261114_222049_865871:batch_002:B"
+      },
+      "VRF087": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "VRF132": {
+        "sku": "validation:20261114_222049_865871:batch_011:A"
+      },
+      "VRF160": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF145": {
+        "sku": "validation:20261115_015259_003828:batch_001:A"
+      },
+      "VRF128": {
+        "sku": "validation:20261114_222049_865871:batch_015:A"
+      },
+      "VRF046": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF150": {
+        "sku": "validation:20261115_015259_003828:batch_001:B"
+      },
+      "VRF166": {
+        "sku": "validation:20261115_015259_003828:batch_004:A"
+      },
+      "VRF033": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF154": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF072": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF098": {
+        "sku": "validation:20261114_222049_865871:batch_006:B"
+      },
+      "VRF211": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "VRF185": {
+        "sku": "validation:20261115_015259_003828:batch_014:A"
+      },
+      "VRF053": {
+        "sku": "validation:20261114_222049_865871:batch_011:A"
+      },
+      "VRF170": {
+        "sku": "validation:20261115_015259_003828:batch_004:B"
+      },
+      "VRF102": {
+        "sku": "validation:20261114_222049_865871:batch_011:A"
+      },
+      "VRF114": {
+        "sku": "validation:20261114_222049_865871:batch_013:B"
+      },
+      "VRF208": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "VRF195": {
+        "sku": "validation:20261115_015259_003828:batch_014:B"
+      },
+      "VRF067": {
+        "sku": "validation:manual:o1"
+      },
+      "VRF157": {
+        "sku": "validation:20261115_015259_003828:batch_003:A"
+      },
+      "VRF163": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF093": {
+        "sku": "validation:manual:t7"
+      },
+      "VRF077": {
+        "sku": "validation:manual:o12"
+      },
+      "VRF179": {
+        "sku": "validation:20261115_123348_479882:batch_007:B"
+      },
+      "VRF210": {
+        "sku": "validation:20261115_123348_479882:batch_001:A"
+      },
+      "VRF091": {
+        "sku": "validation:20261114_222049_865871:batch_003:A"
+      },
+      "VRF063": {
+        "sku": "validation:manual:t1"
+      },
+      "VRF203": {
+        "sku": "validation:20261115_015259_003828:batch_015:B"
+      },
+      "VRF175": {
+        "sku": "validation:20261114_222049_865871:batch_023:A"
+      },
+      "VRF071": {
+        "sku": "validation:manual:o10"
+      },
+      "VRF221": {
+        "sku": "validation:20261115_015259_003828:batch_003:B"
+      },
+      "VRF229": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "VRF220": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      },
+      "VRF227": {
+        "sku": "validation:20261115_123348_479882:batch_007:A"
+      },
+      "VRF225": {
+        "sku": "validation:20261115_123348_479882:batch_002:B"
+      },
+      "VRF181": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      },
+      "VRF183": {
+        "sku": "validation:20261115_015259_003828:batch_012:B"
+      }
+    }
+  },
+  "relevant_skus": {
+    "FC007": [
+      "validation:manual:o1",
+      "validation:manual:o10",
+      "validation:manual:o12",
+      "validation:manual:o4",
+      "validation:manual:o5"
+    ],
+    "FC014": [
+      "validation:20261114_212951_687232:batch_001:A",
+      "validation:20261114_222049_865871:batch_026:B"
+    ],
+    "FC015": [
+      "validation:20261114_212951_687232:batch_001:B",
+      "validation:20261114_222049_865871:batch_026:B"
+    ],
+    "FC004": [
+      "validation:manual:t5",
+      "validation:manual:t7"
+    ],
+    "FC005": [
+      "validation:manual:o1",
+      "validation:manual:o5"
+    ],
+    "FC006": [
+      "validation:manual:o1",
+      "validation:manual:o5"
+    ],
+    "FC010": [
+      "validation:manual:o1",
+      "validation:manual:o5"
+    ],
+    "FC011": [
+      "validation:manual:o1",
+      "validation:manual:o5"
+    ],
+    "FC001": [
+      "validation:manual:t1"
+    ],
+    "FC002": [
+      "validation:manual:t3"
+    ],
+    "FC003": [
+      "validation:manual:t3"
+    ],
+    "FC008": [
+      "validation:manual:o4"
+    ],
+    "FC012": [
+      "validation:manual:o10"
+    ],
+    "FC013": [
+      "validation:manual:o12"
+    ],
+    "FC016": [
+      "validation:20261114_212951_687232:batch_002:A"
+    ],
+    "FC017": [
+      "validation:20261114_212951_687232:batch_002:B"
+    ],
+    "FC018": [
+      "validation:20261114_222049_865871:batch_002:A",
+      "validation:20261114_222049_865871:batch_002:B"
+    ],
+    "FC019": [
+      "validation:20261114_222049_865871:batch_002:B"
+    ],
+    "FC021": [
+      "validation:20261114_222049_865871:batch_003:A",
+      "validation:20261114_222049_865871:batch_003:B"
+    ],
+    "FC022": [
+      "validation:20261114_222049_865871:batch_006:A"
+    ],
+    "FC023": [
+      "validation:20261114_222049_865871:batch_006:B"
+    ],
+    "FC024": [
+      "validation:20261114_222049_865871:batch_011:A",
+      "validation:20261114_222049_865871:batch_011:B"
+    ],
+    "FC025": [
+      "validation:20261114_222049_865871:batch_011:B"
+    ],
+    "FC026": [
+      "validation:20261114_222049_865871:batch_013:A",
+      "validation:20261114_222049_865871:batch_013:B"
+    ],
+    "FC028": [
+      "validation:20261114_222049_865871:batch_014:A"
+    ],
+    "FC029": [
+      "validation:20261114_222049_865871:batch_014:B"
+    ],
+    "FC030": [
+      "validation:20261114_222049_865871:batch_015:A"
+    ],
+    "FC031": [
+      "validation:20261114_222049_865871:batch_015:A",
+      "validation:20261114_222049_865871:batch_015:B"
+    ],
+    "FC032": [
+      "validation:20261114_222049_865871:batch_023:A"
+    ],
+    "FC033": [
+      "validation:20261114_222049_865871:batch_023:B"
+    ],
+    "FC036": [
+      "validation:20261115_015259_003828:batch_001:A"
+    ],
+    "FC037": [
+      "validation:20261115_015259_003828:batch_001:B"
+    ],
+    "FC038": [
+      "validation:20261115_015259_003828:batch_003:A"
+    ],
+    "FC039": [
+      "validation:20261115_015259_003828:batch_003:B"
+    ],
+    "FC040": [
+      "validation:20261115_015259_003828:batch_004:A"
+    ],
+    "FC041": [
+      "validation:20261115_015259_003828:batch_004:B"
+    ],
+    "FC042": [
+      "validation:20261115_015259_003828:batch_006:A"
+    ],
+    "FC043": [
+      "validation:20261115_015259_003828:batch_006:B"
+    ],
+    "FC044": [
+      "validation:20261115_015259_003828:batch_012:A"
+    ],
+    "FC045": [
+      "validation:20261115_015259_003828:batch_012:B"
+    ],
+    "FC046": [
+      "validation:20261115_015259_003828:batch_014:A"
+    ],
+    "FC047": [
+      "validation:20261115_015259_003828:batch_014:B"
+    ],
+    "FC048": [
+      "validation:20261115_015259_003828:batch_015:A"
+    ],
+    "FC049": [
+      "validation:20261115_015259_003828:batch_015:B"
+    ],
+    "FC050": [
+      "validation:20261115_123348_479882:batch_001:A",
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "FC051": [
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "FC052": [
+      "validation:20261115_123348_479882:batch_002:A",
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "FC053": [
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "FC054": [
+      "validation:20261115_123348_479882:batch_007:A"
+    ],
+    "FC055": [
+      "validation:20261115_123348_479882:batch_007:B"
+    ],
+    "VRF103": [
+      "validation:20261114_222049_865871:batch_011:A",
+      "validation:20261114_222049_865871:batch_011:B",
+      "validation:manual:t3"
+    ],
+    "VRF107": [
+      "validation:20261114_222049_865871:batch_011:B"
+    ],
+    "VRF144": [
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261115_015259_003828:batch_001:A"
+    ],
+    "VRF131": [
+      "validation:20261114_222049_865871:batch_015:A",
+      "validation:20261114_222049_865871:batch_015:B"
+    ],
+    "VRF155": [
+      "validation:20261115_015259_003828:batch_003:A",
+      "validation:20261115_015259_003828:batch_003:B"
+    ],
+    "VRF056": [
+      "validation:manual:t3",
+      "validation:manual:t5",
+      "validation:manual:t7"
+    ],
+    "VRF040": [
+      "validation:manual:o1",
+      "validation:manual:o5"
+    ],
+    "VRF110": [
+      "validation:20261114_222049_865871:batch_013:A",
+      "validation:20261114_222049_865871:batch_013:B"
+    ],
+    "VRF168": [
+      "validation:20261115_015259_003828:batch_004:B",
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "VRF068": [
+      "validation:manual:o10",
+      "validation:manual:o12"
+    ],
+    "VRF138": [
+      "validation:20261114_222049_865871:batch_023:B",
+      "validation:20261114_222049_865871:batch_026:B"
+    ],
+    "VRF158": [
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_123348_479882:batch_002:A",
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "VRF172": [
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_015259_003828:batch_006:A",
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "VRF019": [
+      "validation:20261114_212951_687232:batch_001:A",
+      "validation:20261114_222049_865871:batch_023:A",
+      "validation:20261114_222049_865871:batch_023:B",
+      "validation:20261114_222049_865871:batch_026:B"
+    ],
+    "VRF003": [
+      "validation:20261114_212951_687232:batch_001:A",
+      "validation:20261114_222049_865871:batch_026:B"
+    ],
+    "VRF029": [
+      "validation:manual:o1",
+      "validation:manual:o10",
+      "validation:manual:o11",
+      "validation:manual:o12",
+      "validation:manual:o4",
+      "validation:manual:o5"
+    ],
+    "VRF038": [
+      "validation:manual:t3",
+      "validation:manual:t5",
+      "validation:manual:t7"
+    ],
+    "VRF057": [
+      "validation:manual:t3"
+    ],
+    "VRF061": [
+      "validation:manual:t3"
+    ],
+    "VRF062": [
+      "validation:20261114_222049_865871:batch_011:A",
+      "validation:20261114_222049_865871:batch_015:A",
+      "validation:20261114_222049_865871:batch_015:B",
+      "validation:manual:t3"
+    ],
+    "VRF074": [
+      "validation:manual:o1",
+      "validation:manual:o10",
+      "validation:manual:o12",
+      "validation:manual:o4",
+      "validation:manual:o5"
+    ],
+    "VRF083": [
+      "validation:20261114_222049_865871:batch_002:A",
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_006:A",
+      "validation:20261114_222049_865871:batch_006:B"
+    ],
+    "VRF087": [
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_015:A",
+      "validation:20261114_222049_865871:batch_015:B"
+    ],
+    "VRF099": [
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_006:B"
+    ],
+    "VRF127": [
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_015:A"
+    ],
+    "VRF128": [
+      "validation:20261114_222049_865871:batch_015:A",
+      "validation:manual:t4"
+    ],
+    "VRF132": [
+      "validation:20261114_222049_865871:batch_015:A",
+      "validation:20261114_222049_865871:batch_015:B",
+      "validation:manual:t3"
+    ],
+    "VRF145": [
+      "validation:20261115_015259_003828:batch_001:A"
+    ],
+    "VRF149": [
+      "validation:20261115_015259_003828:batch_001:B"
+    ],
+    "VRF150": [
+      "validation:20261115_015259_003828:batch_001:B"
+    ],
+    "VRF154": [
+      "validation:20261115_015259_003828:batch_003:A",
+      "validation:20261115_123348_479882:batch_007:A",
+      "validation:20261115_123348_479882:batch_007:B"
+    ],
+    "VRF160": [
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_123348_479882:batch_002:A",
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "VRF166": [
+      "validation:20261115_015259_003828:batch_004:A",
+      "validation:20261115_123348_479882:batch_001:A"
+    ],
+    "VRF170": [
+      "validation:20261115_015259_003828:batch_004:B",
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "VRF208": [
+      "validation:20261115_123348_479882:batch_001:A",
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "VRF033": [
+      "validation:manual:o1",
+      "validation:manual:o5"
+    ],
+    "VRF046": [
+      "validation:manual:o1",
+      "validation:manual:o5"
+    ],
+    "VRF053": [
+      "validation:manual:t3"
+    ],
+    "VRF072": [
+      "validation:manual:o10",
+      "validation:manual:o12"
+    ],
+    "VRF098": [
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_006:B"
+    ],
+    "VRF102": [
+      "validation:20261114_222049_865871:batch_011:A",
+      "validation:20261114_222049_865871:batch_011:B",
+      "validation:manual:t3"
+    ],
+    "VRF114": [
+      "validation:20261114_222049_865871:batch_013:B"
+    ],
+    "VRF185": [
+      "validation:20261115_015259_003828:batch_014:A"
+    ],
+    "VRF211": [
+      "validation:20261115_015259_003828:batch_004:A",
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "VRF063": [
+      "validation:20261114_212951_687232:batch_002:A",
+      "validation:20261114_212951_687232:batch_002:B",
+      "validation:20261114_222049_865871:batch_003:A",
+      "validation:20261114_222049_865871:batch_003:B",
+      "validation:20261114_222049_865871:batch_006:B",
+      "validation:20261114_222049_865871:batch_011:A",
+      "validation:20261114_222049_865871:batch_011:B",
+      "validation:20261114_222049_865871:batch_013:A",
+      "validation:20261114_222049_865871:batch_013:B",
+      "validation:20261114_222049_865871:batch_015:A",
+      "validation:20261114_222049_865871:batch_015:B",
+      "validation:20261115_015259_003828:batch_004:A",
+      "validation:20261115_123348_479882:batch_001:A",
+      "validation:manual:t1",
+      "validation:manual:t3",
+      "validation:manual:t5"
+    ],
+    "VRF067": [
+      "validation:manual:o1",
+      "validation:manual:o10",
+      "validation:manual:o12",
+      "validation:manual:o4",
+      "validation:manual:o5"
+    ],
+    "VRF071": [
+      "validation:manual:o1",
+      "validation:manual:o10",
+      "validation:manual:o12",
+      "validation:manual:o4",
+      "validation:manual:o5"
+    ],
+    "VRF077": [
+      "validation:manual:o1",
+      "validation:manual:o10",
+      "validation:manual:o12",
+      "validation:manual:o4",
+      "validation:manual:o5"
+    ],
+    "VRF091": [
+      "validation:20261114_212951_687232:batch_002:A",
+      "validation:20261114_212951_687232:batch_002:B",
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_003:A",
+      "validation:20261114_222049_865871:batch_003:B",
+      "validation:20261114_222049_865871:batch_006:B",
+      "validation:20261114_222049_865871:batch_013:A",
+      "validation:20261114_222049_865871:batch_013:B",
+      "validation:20261114_222049_865871:batch_014:A",
+      "validation:20261114_222049_865871:batch_014:B",
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "VRF093": [
+      "validation:20261114_212951_687232:batch_002:A",
+      "validation:20261114_212951_687232:batch_002:B",
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_003:A",
+      "validation:20261114_222049_865871:batch_003:B",
+      "validation:20261114_222049_865871:batch_006:B",
+      "validation:20261114_222049_865871:batch_011:A",
+      "validation:20261114_222049_865871:batch_011:B",
+      "validation:20261114_222049_865871:batch_013:A",
+      "validation:20261114_222049_865871:batch_014:A",
+      "validation:20261114_222049_865871:batch_014:B",
+      "validation:20261114_222049_865871:batch_015:A",
+      "validation:20261114_222049_865871:batch_015:B",
+      "validation:20261115_123348_479882:batch_001:A",
+      "validation:20261115_123348_479882:batch_001:B",
+      "validation:manual:t1",
+      "validation:manual:t7"
+    ],
+    "VRF157": [
+      "validation:20261115_015259_003828:batch_003:A",
+      "validation:20261115_123348_479882:batch_007:A",
+      "validation:20261115_123348_479882:batch_007:B"
+    ],
+    "VRF163": [
+      "validation:20261114_212951_687232:batch_001:A",
+      "validation:20261114_212951_687232:batch_001:B",
+      "validation:20261114_222049_865871:batch_023:B",
+      "validation:20261114_222049_865871:batch_026:B",
+      "validation:20261115_015259_003828:batch_003:A",
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_123348_479882:batch_002:A",
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "VRF175": [
+      "validation:20261115_015259_003828:batch_003:A",
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_015259_003828:batch_006:A",
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "VRF179": [
+      "validation:20261114_222049_865871:batch_026:B",
+      "validation:20261115_015259_003828:batch_003:A",
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_123348_479882:batch_002:B",
+      "validation:20261115_123348_479882:batch_007:B"
+    ],
+    "VRF181": [
+      "validation:20261114_212951_687232:batch_002:B",
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_003:A",
+      "validation:20261114_222049_865871:batch_003:B",
+      "validation:20261114_222049_865871:batch_013:B",
+      "validation:20261115_015259_003828:batch_012:A",
+      "validation:20261115_015259_003828:batch_012:B"
+    ],
+    "VRF183": [
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_003:A",
+      "validation:20261114_222049_865871:batch_003:B",
+      "validation:20261114_222049_865871:batch_013:B",
+      "validation:20261114_222049_865871:batch_014:A",
+      "validation:20261114_222049_865871:batch_014:B",
+      "validation:20261115_015259_003828:batch_012:B"
+    ],
+    "VRF195": [
+      "validation:20261114_212951_687232:batch_002:A",
+      "validation:20261114_212951_687232:batch_002:B",
+      "validation:20261114_222049_865871:batch_002:B",
+      "validation:20261114_222049_865871:batch_003:A",
+      "validation:20261114_222049_865871:batch_003:B",
+      "validation:20261115_015259_003828:batch_014:B",
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "VRF203": [
+      "validation:20261115_015259_003828:batch_001:A",
+      "validation:20261115_015259_003828:batch_004:B",
+      "validation:20261115_015259_003828:batch_015:B",
+      "validation:20261115_123348_479882:batch_001:B"
+    ],
+    "VRF210": [
+      "validation:20261114_222049_865871:batch_003:A",
+      "validation:20261114_222049_865871:batch_003:B",
+      "validation:20261114_222049_865871:batch_011:B",
+      "validation:20261114_222049_865871:batch_015:B",
+      "validation:20261115_015259_003828:batch_004:A",
+      "validation:20261115_123348_479882:batch_001:A",
+      "validation:20261115_123348_479882:batch_001:B",
+      "validation:manual:t3"
+    ],
+    "VRF221": [
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_123348_479882:batch_002:A",
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "VRF225": [
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_123348_479882:batch_002:B"
+    ],
+    "VRF227": [
+      "validation:20261114_222049_865871:batch_023:A",
+      "validation:20261114_222049_865871:batch_023:B",
+      "validation:20261114_222049_865871:batch_026:B",
+      "validation:20261115_015259_003828:batch_003:A",
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_123348_479882:batch_002:B",
+      "validation:20261115_123348_479882:batch_007:A"
+    ],
+    "VRF229": [
+      "validation:20261115_123348_479882:batch_007:A",
+      "validation:20261115_123348_479882:batch_007:B"
+    ],
+    "VRF220": [
+      "validation:20261115_015259_003828:batch_003:B",
+      "validation:20261115_123348_479882:batch_002:A",
+      "validation:20261115_123348_479882:batch_002:B"
+    ]
+  },
+  "k_trials": {
+    "2": {
+      "FC003": "validation:manual:t3",
+      "FC001": "validation:manual:t1",
+      "FC018": "validation:20261114_222049_865871:batch_002:B",
+      "FC012": "validation:manual:o10",
+      "FC016": "validation:20261114_212951_687232:batch_002:B",
+      "FC019": "validation:20261114_222049_865871:batch_002:B",
+      "FC004": "validation:manual:t5",
+      "FC021": "validation:20261114_222049_865871:batch_003:B",
+      "FC013": "validation:manual:o12",
+      "FC017": "validation:20261114_212951_687232:batch_002:B",
+      "FC008": "validation:manual:o4",
+      "FC015": "validation:20261114_222049_865871:batch_026:B",
+      "FC002": "validation:manual:t3",
+      "FC024": "validation:20261114_222049_865871:batch_011:B",
+      "FC025": "validation:20261114_222049_865871:batch_011:B",
+      "FC023": "validation:20261114_222049_865871:batch_006:B",
+      "FC022": "validation:20261114_222049_865871:batch_006:A",
+      "FC006": "validation:manual:o1",
+      "FC026": "validation:20261114_222049_865871:batch_013:A",
+      "FC031": "validation:20261114_222049_865871:batch_015:B",
+      "FC029": "validation:20261114_222049_865871:batch_014:B",
+      "FC038": "validation:20261115_015259_003828:batch_003:A",
+      "FC028": "validation:20261114_222049_865871:batch_014:B",
+      "FC030": "validation:20261114_222049_865871:batch_015:A",
+      "FC005": "validation:manual:o5",
+      "FC010": "validation:manual:o1",
+      "FC014": "validation:20261114_212951_687232:batch_001:A",
+      "FC039": "validation:20261115_015259_003828:batch_003:B",
+      "FC037": "validation:20261115_015259_003828:batch_001:B",
+      "FC011": "validation:manual:o5",
+      "FC040": "validation:20261115_015259_003828:batch_004:A",
+      "FC032": "validation:20261114_222049_865871:batch_023:B",
+      "FC041": "validation:20261115_015259_003828:batch_004:B",
+      "FC033": "validation:20261114_222049_865871:batch_023:B",
+      "FC043": "validation:20261115_015259_003828:batch_006:B",
+      "FC044": "validation:20261115_015259_003828:batch_012:B",
+      "FC036": "validation:20261115_015259_003828:batch_001:A",
+      "FC042": "validation:20261115_015259_003828:batch_006:A",
+      "FC047": "validation:20261115_015259_003828:batch_014:B",
+      "FC049": "validation:20261115_015259_003828:batch_015:B",
+      "FC050": "validation:20261115_123348_479882:batch_001:A",
+      "FC007": "validation:manual:o10",
+      "FC045": "validation:20261115_015259_003828:batch_012:B",
+      "FC051": "validation:20261115_123348_479882:batch_001:A",
+      "FC046": "validation:20261115_015259_003828:batch_014:A",
+      "FC052": "validation:20261115_123348_479882:batch_002:B",
+      "FC054": "validation:20261115_123348_479882:batch_007:A",
+      "FC048": "validation:20261115_015259_003828:batch_015:A",
+      "FC053": "validation:20261115_123348_479882:batch_002:B",
+      "FC055": "validation:20261115_123348_479882:batch_007:A",
+      "VRF168": "validation:20261115_015259_003828:batch_004:B",
+      "VRF107": "validation:20261114_222049_865871:batch_011:B",
+      "VRF103": "validation:20261114_222049_865871:batch_011:B",
+      "VRF110": "validation:20261115_015259_003828:batch_014:A",
+      "VRF068": "validation:manual:o12",
+      "VRF056": "validation:manual:t5",
+      "VRF131": "validation:20261114_222049_865871:batch_015:B",
+      "VRF172": "validation:20261115_123348_479882:batch_002:B",
+      "VRF144": "validation:20261115_015259_003828:batch_001:A",
+      "VRF040": "validation:manual:o1",
+      "VRF158": "validation:20261115_015259_003828:batch_006:B",
+      "VRF138": "validation:20261114_222049_865871:batch_023:B",
+      "VRF155": "validation:20261115_015259_003828:batch_003:A",
+      "VRF029": "validation:manual:o12",
+      "VRF057": "validation:manual:t3",
+      "VRF003": "validation:20261114_222049_865871:batch_026:B",
+      "VRF038": "validation:manual:t7",
+      "VRF019": "validation:20261114_222049_865871:batch_026:B",
+      "VRF061": "validation:manual:t5",
+      "VRF074": "validation:manual:o12",
+      "VRF062": "validation:20261114_222049_865871:batch_011:B",
+      "VRF099": "validation:20261114_222049_865871:batch_015:B",
+      "VRF127": "validation:20261114_222049_865871:batch_015:A",
+      "VRF149": "validation:20261115_015259_003828:batch_001:B",
+      "VRF083": "validation:20261114_222049_865871:batch_006:A",
+      "VRF087": "validation:20261114_222049_865871:batch_015:B",
+      "VRF132": "validation:20261114_222049_865871:batch_011:B",
+      "VRF150": "validation:20261115_015259_003828:batch_001:B",
+      "VRF145": "validation:20261115_015259_003828:batch_001:A",
+      "VRF128": "validation:20261114_222049_865871:batch_015:A",
+      "VRF160": "validation:20261115_015259_003828:batch_003:B",
+      "VRF166": "validation:20261115_123348_479882:batch_001:A",
+      "VRF046": "validation:manual:o5",
+      "VRF033": "validation:manual:o1",
+      "VRF170": "validation:20261115_123348_479882:batch_001:A",
+      "VRF154": "validation:20261115_015259_003828:batch_003:A",
+      "VRF053": "validation:manual:t3",
+      "VRF072": "validation:manual:o12",
+      "VRF208": "validation:20261115_123348_479882:batch_001:A",
+      "VRF098": "validation:20261114_222049_865871:batch_006:B",
+      "VRF185": "validation:20261115_015259_003828:batch_014:A",
+      "VRF211": "validation:20261115_123348_479882:batch_001:A",
+      "VRF102": "validation:20261114_222049_865871:batch_011:B",
+      "VRF114": "validation:20261114_222049_865871:batch_013:A",
+      "VRF067": "validation:manual:o1",
+      "VRF157": "validation:20261115_015259_003828:batch_003:A",
+      "VRF163": "validation:20261115_015259_003828:batch_003:B",
+      "VRF093": "validation:manual:t7",
+      "VRF077": "validation:manual:o12",
+      "VRF195": "validation:20261115_123348_479882:batch_001:A",
+      "VRF091": "validation:20261114_222049_865871:batch_003:B",
+      "VRF063": "validation:manual:t1",
+      "VRF179": "validation:20261115_123348_479882:batch_007:B",
+      "VRF210": "validation:20261115_123348_479882:batch_001:A",
+      "VRF203": "validation:20261115_015259_003828:batch_015:B",
+      "VRF175": "validation:20261114_222049_865871:batch_023:A",
+      "VRF221": "validation:20261115_123348_479882:batch_002:B",
+      "VRF181": "validation:20261115_015259_003828:batch_012:B",
+      "VRF071": "validation:manual:o10",
+      "VRF229": "validation:20261115_123348_479882:batch_002:B",
+      "VRF220": "validation:20261115_123348_479882:batch_002:B",
+      "VRF183": "validation:20261114_222049_865871:batch_014:B",
+      "VRF227": "validation:20261115_123348_479882:batch_007:B",
+      "VRF225": "validation:20261115_123348_479882:batch_002:B"
+    },
+    "4": {
+      "FC003": "validation:manual:t3",
+      "FC001": "validation:manual:t1",
+      "FC018": "validation:20261114_222049_865871:batch_002:B",
+      "FC012": "validation:manual:o10",
+      "FC016": "validation:20261114_212951_687232:batch_002:B",
+      "FC019": "validation:20261114_222049_865871:batch_002:B",
+      "FC004": "validation:manual:t5",
+      "FC021": "validation:20261114_222049_865871:batch_003:B",
+      "FC013": "validation:manual:o12",
+      "FC017": "validation:20261114_212951_687232:batch_002:B",
+      "FC008": "validation:manual:o4",
+      "FC015": "validation:20261114_222049_865871:batch_026:B",
+      "FC002": "validation:manual:t3",
+      "FC024": "validation:20261114_222049_865871:batch_011:B",
+      "FC025": "validation:20261114_222049_865871:batch_011:B",
+      "FC023": "validation:20261114_222049_865871:batch_006:B",
+      "FC022": "validation:20261114_222049_865871:batch_006:A",
+      "FC006": "validation:manual:o1",
+      "FC026": "validation:20261114_222049_865871:batch_013:A",
+      "FC031": "validation:20261114_222049_865871:batch_015:B",
+      "FC029": "validation:20261114_222049_865871:batch_014:B",
+      "FC038": "validation:20261115_015259_003828:batch_003:A",
+      "FC028": "validation:20261114_222049_865871:batch_014:B",
+      "FC030": "validation:20261114_222049_865871:batch_015:A",
+      "FC005": "validation:manual:o5",
+      "FC010": "validation:manual:o1",
+      "FC014": "validation:20261114_212951_687232:batch_001:A",
+      "FC039": "validation:20261115_015259_003828:batch_003:B",
+      "FC037": "validation:20261115_015259_003828:batch_001:B",
+      "FC011": "validation:manual:o5",
+      "FC040": "validation:20261115_015259_003828:batch_004:A",
+      "FC032": "validation:20261114_222049_865871:batch_023:B",
+      "FC041": "validation:20261115_015259_003828:batch_004:B",
+      "FC033": "validation:20261114_222049_865871:batch_023:B",
+      "FC043": "validation:20261115_015259_003828:batch_006:B",
+      "FC044": "validation:20261115_015259_003828:batch_012:B",
+      "FC036": "validation:20261115_015259_003828:batch_001:A",
+      "FC042": "validation:20261115_015259_003828:batch_006:A",
+      "FC047": "validation:20261115_015259_003828:batch_014:B",
+      "FC049": "validation:20261115_015259_003828:batch_015:B",
+      "FC050": "validation:20261115_123348_479882:batch_001:A",
+      "FC007": "validation:manual:o10",
+      "FC045": "validation:20261115_015259_003828:batch_012:B",
+      "FC051": "validation:20261115_123348_479882:batch_001:A",
+      "FC046": "validation:20261115_015259_003828:batch_014:A",
+      "FC052": "validation:20261115_123348_479882:batch_002:B",
+      "FC054": "validation:20261115_123348_479882:batch_007:A",
+      "FC048": "validation:20261115_015259_003828:batch_015:A",
+      "FC053": "validation:20261115_123348_479882:batch_002:B",
+      "FC055": "validation:20261115_123348_479882:batch_007:A",
+      "VRF168": "validation:20261115_015259_003828:batch_004:B",
+      "VRF107": "validation:20261114_222049_865871:batch_011:B",
+      "VRF103": "validation:20261114_222049_865871:batch_011:B",
+      "VRF110": "validation:20261114_222049_865871:batch_013:A",
+      "VRF068": "validation:manual:o10",
+      "VRF056": "validation:manual:t5",
+      "VRF131": "validation:20261114_222049_865871:batch_015:B",
+      "VRF172": "validation:20261115_015259_003828:batch_003:B",
+      "VRF144": "validation:20261114_222049_865871:batch_015:B",
+      "VRF040": "validation:manual:o1",
+      "VRF158": "validation:20261115_015259_003828:batch_003:B",
+      "VRF138": "validation:20261114_222049_865871:batch_023:B",
+      "VRF155": "validation:20261115_015259_003828:batch_003:A",
+      "VRF029": "validation:manual:o12",
+      "VRF057": "validation:manual:t3",
+      "VRF003": "validation:20261114_222049_865871:batch_026:B",
+      "VRF038": "validation:manual:t3",
+      "VRF019": "validation:20261114_222049_865871:batch_026:B",
+      "VRF061": "validation:manual:t5",
+      "VRF074": "validation:manual:o12",
+      "VRF062": "validation:manual:t3",
+      "VRF099": "validation:20261114_222049_865871:batch_006:B",
+      "VRF127": "validation:20261114_222049_865871:batch_015:A",
+      "VRF149": "validation:20261114_222049_865871:batch_015:B",
+      "VRF083": "validation:20261114_222049_865871:batch_006:A",
+      "VRF087": "validation:20261114_222049_865871:batch_006:B",
+      "VRF132": "validation:20261114_222049_865871:batch_011:B",
+      "VRF150": "validation:20261114_222049_865871:batch_015:B",
+      "VRF145": "validation:20261114_222049_865871:batch_015:B",
+      "VRF128": "validation:20261114_222049_865871:batch_015:A",
+      "VRF160": "validation:20261115_015259_003828:batch_003:B",
+      "VRF166": "validation:20261115_123348_479882:batch_001:A",
+      "VRF046": "validation:manual:o5",
+      "VRF033": "validation:manual:o1",
+      "VRF170": "validation:20261115_015259_003828:batch_004:B",
+      "VRF154": "validation:20261115_015259_003828:batch_003:A",
+      "VRF053": "validation:manual:t3",
+      "VRF072": "validation:manual:o12",
+      "VRF208": "validation:20261115_123348_479882:batch_001:A",
+      "VRF098": "validation:20261114_222049_865871:batch_006:B",
+      "VRF185": "validation:20261115_015259_003828:batch_014:A",
+      "VRF211": "validation:20261115_123348_479882:batch_001:A",
+      "VRF102": "validation:20261114_222049_865871:batch_011:B",
+      "VRF114": "validation:20261114_222049_865871:batch_013:B",
+      "VRF067": "validation:manual:o1",
+      "VRF157": "validation:20261115_015259_003828:batch_003:A",
+      "VRF163": "validation:20261115_015259_003828:batch_003:B",
+      "VRF093": "validation:manual:t7",
+      "VRF077": "validation:manual:o12",
+      "VRF195": "validation:20261115_123348_479882:batch_001:A",
+      "VRF091": "validation:20261114_222049_865871:batch_003:B",
+      "VRF063": "validation:manual:t1",
+      "VRF179": "validation:20261115_123348_479882:batch_007:A",
+      "VRF210": "validation:20261115_123348_479882:batch_001:A",
+      "VRF203": "validation:20261115_015259_003828:batch_015:B",
+      "VRF175": "validation:20261114_222049_865871:batch_023:B",
+      "VRF221": "validation:20261115_015259_003828:batch_003:B",
+      "VRF181": "validation:20261115_015259_003828:batch_012:B",
+      "VRF071": "validation:manual:o12",
+      "VRF229": "validation:20261115_123348_479882:batch_007:A",
+      "VRF220": "validation:20261115_123348_479882:batch_002:B",
+      "VRF183": "validation:20261115_015259_003828:batch_012:B",
+      "VRF227": "validation:20261115_123348_479882:batch_007:B",
+      "VRF225": "validation:20261115_015259_003828:batch_003:B"
+    },
+    "6": {
+      "FC003": "validation:manual:t3",
+      "FC001": "validation:manual:t1",
+      "FC018": "validation:20261114_222049_865871:batch_002:B",
+      "FC012": "validation:manual:o10",
+      "FC016": "validation:20261114_212951_687232:batch_002:B",
+      "FC019": "validation:20261114_222049_865871:batch_002:B",
+      "FC004": "validation:manual:t5",
+      "FC021": "validation:20261114_222049_865871:batch_003:B",
+      "FC013": "validation:manual:o12",
+      "FC017": "validation:20261114_212951_687232:batch_002:B",
+      "FC008": "validation:manual:o4",
+      "FC015": "validation:20261114_222049_865871:batch_026:B",
+      "FC002": "validation:manual:t3",
+      "FC024": "validation:20261114_222049_865871:batch_011:B",
+      "FC025": "validation:20261114_222049_865871:batch_011:B",
+      "FC023": "validation:20261114_222049_865871:batch_006:B",
+      "FC022": "validation:20261114_222049_865871:batch_006:A",
+      "FC006": "validation:manual:o1",
+      "FC026": "validation:20261114_222049_865871:batch_013:A",
+      "FC031": "validation:20261114_222049_865871:batch_015:B",
+      "FC029": "validation:20261114_222049_865871:batch_014:B",
+      "FC038": "validation:20261115_015259_003828:batch_003:A",
+      "FC028": "validation:20261114_222049_865871:batch_014:B",
+      "FC030": "validation:20261114_222049_865871:batch_015:A",
+      "FC005": "validation:manual:o5",
+      "FC010": "validation:manual:o1",
+      "FC014": "validation:20261114_212951_687232:batch_001:A",
+      "FC039": "validation:20261115_015259_003828:batch_003:B",
+      "FC037": "validation:20261115_015259_003828:batch_001:B",
+      "FC011": "validation:manual:o5",
+      "FC040": "validation:20261115_015259_003828:batch_004:A",
+      "FC032": "validation:20261114_222049_865871:batch_023:B",
+      "FC041": "validation:20261115_015259_003828:batch_004:B",
+      "FC033": "validation:20261114_222049_865871:batch_023:B",
+      "FC043": "validation:20261115_015259_003828:batch_006:B",
+      "FC044": "validation:20261115_015259_003828:batch_012:B",
+      "FC036": "validation:20261115_015259_003828:batch_001:A",
+      "FC042": "validation:20261115_015259_003828:batch_006:A",
+      "FC047": "validation:20261115_015259_003828:batch_014:B",
+      "FC049": "validation:20261115_015259_003828:batch_015:B",
+      "FC050": "validation:20261115_123348_479882:batch_001:A",
+      "FC007": "validation:manual:o10",
+      "FC045": "validation:20261115_015259_003828:batch_012:B",
+      "FC051": "validation:20261115_123348_479882:batch_001:A",
+      "FC046": "validation:20261115_015259_003828:batch_014:A",
+      "FC052": "validation:20261115_123348_479882:batch_002:B",
+      "FC054": "validation:20261115_123348_479882:batch_007:A",
+      "FC048": "validation:20261115_015259_003828:batch_015:A",
+      "FC053": "validation:20261115_123348_479882:batch_002:B",
+      "FC055": "validation:20261115_123348_479882:batch_007:A",
+      "VRF168": "validation:20261115_015259_003828:batch_004:B",
+      "VRF107": "validation:20261114_222049_865871:batch_011:B",
+      "VRF103": "validation:20261114_222049_865871:batch_011:B",
+      "VRF110": "validation:20261114_222049_865871:batch_013:A",
+      "VRF068": "validation:manual:o10",
+      "VRF056": "validation:manual:t5",
+      "VRF131": "validation:20261114_222049_865871:batch_015:B",
+      "VRF172": "validation:20261115_123348_479882:batch_002:B",
+      "VRF144": "validation:20261114_222049_865871:batch_002:B",
+      "VRF040": "validation:manual:o1",
+      "VRF158": "validation:20261115_015259_003828:batch_003:B",
+      "VRF138": "validation:20261114_222049_865871:batch_023:B",
+      "VRF155": "validation:20261115_015259_003828:batch_003:A",
+      "VRF029": "validation:manual:o12",
+      "VRF057": "validation:20261114_222049_865871:batch_011:B",
+      "VRF003": "validation:20261114_212951_687232:batch_001:A",
+      "VRF038": "validation:manual:t7",
+      "VRF019": "validation:20261114_222049_865871:batch_026:B",
+      "VRF061": "validation:manual:t3",
+      "VRF074": "validation:manual:o12",
+      "VRF062": "validation:manual:t3",
+      "VRF099": "validation:20261114_222049_865871:batch_006:B",
+      "VRF127": "validation:20261114_222049_865871:batch_015:A",
+      "VRF149": "validation:20261114_222049_865871:batch_002:B",
+      "VRF083": "validation:20261114_222049_865871:batch_006:A",
+      "VRF087": "validation:20261114_222049_865871:batch_006:B",
+      "VRF132": "validation:20261114_222049_865871:batch_015:B",
+      "VRF150": "validation:20261114_222049_865871:batch_015:B",
+      "VRF145": "validation:20261114_222049_865871:batch_015:A",
+      "VRF128": "validation:20261114_222049_865871:batch_015:A",
+      "VRF160": "validation:20261115_015259_003828:batch_003:B",
+      "VRF166": "validation:20261115_015259_003828:batch_004:A",
+      "VRF046": "validation:manual:o5",
+      "VRF033": "validation:manual:o1",
+      "VRF170": "validation:20261115_015259_003828:batch_004:B",
+      "VRF154": "validation:20261115_015259_003828:batch_003:A",
+      "VRF053": "validation:manual:t3",
+      "VRF072": "validation:manual:o12",
+      "VRF208": "validation:20261115_123348_479882:batch_001:A",
+      "VRF098": "validation:20261114_222049_865871:batch_006:B",
+      "VRF185": "validation:20261115_015259_003828:batch_014:A",
+      "VRF211": "validation:20261115_123348_479882:batch_001:A",
+      "VRF102": "validation:20261114_222049_865871:batch_011:B",
+      "VRF114": "validation:20261114_222049_865871:batch_013:B",
+      "VRF067": "validation:manual:o1",
+      "VRF157": "validation:20261115_015259_003828:batch_003:A",
+      "VRF163": "validation:20261115_015259_003828:batch_003:B",
+      "VRF093": "validation:manual:t7",
+      "VRF077": "validation:manual:o12",
+      "VRF195": "validation:20261115_123348_479882:batch_001:B",
+      "VRF091": "validation:20261114_222049_865871:batch_003:B",
+      "VRF063": "validation:manual:t1",
+      "VRF179": "validation:20261115_123348_479882:batch_007:A",
+      "VRF210": "validation:20261115_123348_479882:batch_001:A",
+      "VRF203": "validation:20261115_015259_003828:batch_015:B",
+      "VRF175": "validation:20261114_222049_865871:batch_023:B",
+      "VRF221": "validation:20261115_015259_003828:batch_003:B",
+      "VRF181": "validation:20261115_015259_003828:batch_012:B",
+      "VRF071": "validation:manual:o12",
+      "VRF229": "validation:20261115_123348_479882:batch_007:A",
+      "VRF220": "validation:20261115_015259_003828:batch_003:B",
+      "VRF183": "validation:20261115_015259_003828:batch_012:B",
+      "VRF227": "validation:20261115_123348_479882:batch_007:B",
+      "VRF225": "validation:20261115_015259_003828:batch_003:B"
+    }
+  }
+}
